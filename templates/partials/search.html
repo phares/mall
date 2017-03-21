@@ -1,0 +1,9 @@
+{% load i18n %}
+
+<div class="col-sm-3">
+    <div class="search_box pull-right">
+        <form method="get" action="{% url 'search:search' %}" >
+            {{ search_form.q }}
+        </form>
+    </div>
+</div>

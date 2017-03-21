@@ -1,0 +1,376 @@
+{% extends "layout.html" %}
+
+{% load history_tags %}
+{% load currency_filters %}
+{% load reviews_tags %}
+{% load staticfiles %}
+{% load product_tags %}
+{% load display_tags %}
+{% load category_tags %}
+{% load i18n %}
+{% load purchase_info_tags %}
+
+{% block title %}
+    {{ product.title }} | {{ block.super }}
+{% endblock %}
+
+{% block description %}
+    {{ product.description|default:""|striptags }}
+{% endblock %}
+
+{% block breadcrumbs %}
+<ul class="breadcrumb">
+    <li>
+        <a href="{{ homepage_url }}">{% trans "Home" %}</a>
+    </li>
+    {% with category=product.categories.all.0 %}
+        {% for c in category.get_ancestors_and_self %}
+        <li>
+            <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+        </li>
+        {% endfor %}
+        <li class="active">{{ product.title }}</li>
+
+        {% get_back_button as backbutton %}
+        {% if backbutton %}
+            <li class="pull-right">
+                <a href="{{ backbutton.url }}">
+                    <i class="icon-arrow-left"></i> {{ backbutton.title }}
+                </a>
+            </li>
+        {% endif %}
+    {% endwith %}
+</ul>
+{% endblock %}
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="left-sidebar">
+                {% category_tree as tree_categories %}
+                {% if tree_categories %}
+                <h2>Category</h2>
+                <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <ul class="nav nav-list">
+                                    {% for tree_category, info in tree_categories %}
+                                        <li>
+                                            <a href="{{ tree_category.get_absolute_url }}">
+                                                {% if tree_category.pk == category.pk %}
+                                                    <strong>{{ tree_category.name }}</strong>
+                                                {% else %}
+                                                    {{ tree_category.name }}
+                                                {% endif %}
+                                            </a>
+
+                                            {% if info.has_children %}<ul>{% else %}</li>{% endif %}
+                                            {% for n in info.num_to_close %}
+                                                </ul>
+                                        </li>
+                                            {% endfor %}
+                                    {% endfor %}
+                                </ul>
+                            </h4>
+                        </div>
+                    </div>
+                </div><!--/category-products-->
+            {% endif %}
+            </div>
+        </div>
+
+
+        {% block product_gallery %}
+        <div class="col-sm-9 padding-right">
+            <div class="product-details"><!--product-details-->
+                <div class="col-sm-5">
+                        {% include "catalogue/partials/gallery.html" %}
+                </div>
+                <div class="col-sm-7">
+                    {% block product_main %}
+                    <div class="product-information"><!--/product-information-->
+                        {% if user.is_authenticated and user.is_staff %}
+                        <a class="pull-right hidden-xs" href="{% url 'dashboard:catalogue-product' pk=product.id %}"><small><i class="icon-edit"></i> {% trans "Edit this product" %}</small></a>
+                        {% endif %}
+                        <img src="{% static 'eshop/images/product-details/new.jpg' %}" class="newarrival" alt=""/>
+                            <h2>{{ product.get_title }}</h2>
+                            <p>  </p>
+                            <img src="{% static 'eshop/images/product-details/rating.png' %}" alt="" /> <br/>
+
+                            {% block product_stock_record %}
+                                {% include "catalogue/partials/stock_record.html" with verbose=1 %}
+                            {% endblock %}
+
+
+                            {% block product_basket_form %}
+                                {% include "catalogue/partials/add_to_basket_form.html" %}
+                            {% endblock %}
+
+                            <!--<p><b>Condition:</b> New</p>-->
+                            <!--<p><b>Brand:</b> E-SHOPPER</p>-->
+                            <a href=""><img src="{% static 'eshop/images/product-details/share.png' %}" class="share img-responsive"  alt="" /></a>
+                    </div> <!--/product-information-->
+                    {% endblock %}
+                </div>
+            </div><!--/product-details-->
+        {% endblock %}
+
+        <div class="category-tab shop-details-tab"><!--category-tab-->
+            <div class="col-sm-12">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#details" data-toggle="tab">Details</a></li>
+                    <li><a href="#companyprofile" data-toggle="tab">Company Profile</a></li>
+                    <li><a href="#tag" data-toggle="tab">Tag</a></li>
+                    <li><a href="#reviews" data-toggle="tab">Reviews (5)</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane fade" id="details" >
+                        {% block product_description %}
+                        {% if product.description %}
+                        <div id="product_description" class="sub-header">
+                            <h2>{% trans "Product Description" %}</h2>
+                        </div>
+                        <p>{{ product.description|safe }}</p>
+                        {% endif %}
+                    {% endblock %}
+
+                    {% block product_info %}
+                    <div class="sub-header">
+                        <h2>{% trans "Product Information" %}</h2>
+                    </div>
+                    <table class="table table-striped">
+                        {% if product.upc %}
+                        <tr>
+                            <th>{% trans "UPC" %}</th><td>{{ product.upc }}</td>
+                        </tr>
+                        {% endif %}
+                        <tr>
+                            <th>{% trans "Product Type" %}</th><td>{{ product.get_product_class.name }}</td>
+                        </tr>
+
+                        {% purchase_info_for_product request product as session %}
+                        {% if session.price.exists %}
+                            <tr>
+                                <th>{% trans "Price (excl. tax)" %}</th><td>{{ session.price.excl_tax|currency:session.price.currency }}</td>
+                            </tr>
+                            {% if session.price.is_tax_known %}
+                                <tr>
+                                    <th>{% trans "Price (incl. tax)" %}</th><td>{{ session.price.incl_tax|currency:session.price.currency }}</td>
+                                </tr>
+                                <tr>
+                                    <th>{% trans "Tax" %}</th><td>{{ session.price.tax|currency:session.price.currency }}</td>
+                                </tr>
+                            {% endif %}
+                            <tr>
+                                <th>{% trans "Availability" %}</th>
+                                <td>{{ session.availability.message }}</td>
+                            </tr>
+                        {% endif %}
+                        {% for av in product.attribute_values.all %}
+                            <tr>
+                                <th>{{ av.attribute.name }}</th>
+                                <td>{{ av.value_as_html }}</td>
+                            </tr>
+                        {% endfor %}
+                        {% iffeature "reviews" %}
+                            <tr>
+                                <th>{% trans "Number of reviews" %}</th>
+                                <td>{{ product.num_approved_reviews }}</td>
+                            </tr>
+                        {% endiffeature %}
+                    </table>
+                    {% endblock %}
+                </div>
+
+                <div class="tab-pane fade" id="companyprofile" >
+                    <div class="col-sm-3">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="images/home/gallery1.jpg" alt="" />
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="images/home/gallery3.jpg" alt="" />
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="images/home/gallery2.jpg" alt="" />
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="images/home/gallery4.jpg" alt="" />
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="tag" >
+                    <div class="col-sm-3">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="images/home/gallery1.jpg" alt="" />
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="images/home/gallery2.jpg" alt="" />
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="images/home/gallery3.jpg" alt="" />
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="product-image-wrapper">
+                            <div class="single-products">
+                                <div class="productinfo text-center">
+                                    <img src="images/home/gallery4.jpg" alt="" />
+                                    <h2>$56</h2>
+                                    <p>Easy Polo Black Edition</p>
+                                    <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade active in" id="reviews" >
+                    <div class="col-sm-12">
+                        <ul>
+                            <li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
+                            <li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
+                            <li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
+                        </ul>
+                        <p> irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p><b>Write Your Review</b></p>
+
+                        <form action="#">
+                            <span>
+                                <input type="text" placeholder="Your Name"/>
+                                <input type="email" placeholder="Email Address"/>
+                            </span>
+                            <textarea name="" ></textarea>
+                            <b>Rating: </b> <img src="images/product-details/rating.png" alt="" />
+                            <button type="button" class="btn btn-default pull-right">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /row -->
+
+    {% iffeature "reviews" %}
+        {% block product_review %}
+        <section>
+            <div id="reviews" class="sub-header">
+                {% if product.num_approved_reviews > 3 %}
+                    <a href="{% url 'catalogue:reviews-list' product_slug=product.slug product_pk=product.id %}" class="btn pull-right">{% trans "See all reviews" %}</a>
+                {% endif %}
+                <h2>{% trans "Customer Reviews" %}</h2>
+            </div>
+
+            {% if product.num_approved_reviews == 0 %}
+                <p>
+                    {% if product|is_review_permitted:user %}
+                        {% url 'catalogue:reviews-add' product_slug=product.slug product_pk=product.id as add_review_url %}
+                            {% blocktrans %}This product does not have any reviews yet -
+                            <a href="{{ add_review_url }}#addreview">be the first to write one</a>.
+                        {% endblocktrans %}
+                    {% else %}
+                        {% trans "This product does not have any reviews yet" %}.
+                    {% endif %}
+                </p>
+            {% else %}
+                <ol class="list-unstyled review-list">
+                    {% for review in product.reviews.approved.all|slice:":3" %}
+                        <li>
+                        {% include 'catalogue/partials/review.html' %}
+                        </li>
+                    {% endfor %}
+                </ol>
+            {% endif %}
+        </section>
+        {% endblock product_review %}
+    {% endiffeature %}
+
+    {% with recommended_products=product.sorted_recommended_products|slice:":6" %}
+        {% if recommended_products %}
+            <div class="sub-header">
+                <h2>{% trans "Recommended items" %}</h2>
+            </div>
+            <ul class="row">
+                {% for product in recommended_products %}
+                <li class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                    {% render_product product %}
+                </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    {% recently_viewed_products current_product=product %}
+
+{% endblock content %}
+
+{% block extrascripts %}
+    {{ block.super }}
+{% endblock %}
+    </div>

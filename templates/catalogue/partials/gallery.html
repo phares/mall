@@ -1,0 +1,66 @@
+{% load thumbnail %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% with all_images=product.images.all %}
+    {# use length rather then count as the images get queried anyways #}
+
+    {% if all_images|length > 1 %}
+
+        <div class="view-product">
+                {% with image=product.primary_image %}
+                        {% thumbnail image.original "266x400" upscale=False as thumb %}
+                        <img src="{{ thumb.url }}" alt="{{ product.get_title }}" />
+                        {% endthumbnail %}
+                {% endwith %}
+        </div>
+
+        <div id="similar-product" class="carousel slide" data-ride="carousel">
+                <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+            {% for image in all_images %}
+                <div class="item {% if forloop.first %}active{% endif %}">
+                    {% thumbnail image.original "65x55" crop="center" as thumb %}
+                    <img src="{{ thumb.url }}" alt="{{ product.get_title }}" />
+                    {% endthumbnail %}
+                </div>
+            {% endfor %}
+            </div>
+
+              <!-- Controls -->
+              <a class="left item-control" href="#similar-product" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+              </a>
+              <a class="right item-control" href="#similar-product" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+              </a>
+
+        </div>
+
+
+            <!--<ol class="carousel-indicators thumbnail">-->
+                <!--{% for image in all_images %}-->
+                    <!--<li data-target="#product_gallery" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}">-->
+                        <!--{% thumbnail image.original "65x55" crop="center" as thumb %}-->
+                        <!--<img src="{{ thumb.url }}" alt="{{ product.get_title }}" />-->
+                        <!--{% endthumbnail %}-->
+                    <!--</li>-->
+                <!--{% endfor %}-->
+            <!--</ol>-->
+
+
+
+    {% else %}
+
+        {# Only one image to show #}
+        <div class="view-product" >
+                    {% with image=product.primary_image %}
+                        {% thumbnail image.original "440x400" upscale=False as thumb %}
+                            <img src="{{ thumb.url }}" alt="{{ product.get_title }}" />
+                            <h3>ZOOM</h3>
+                        {% endthumbnail %}
+                    {% endwith %}
+        </div>
+
+    {% endif %}
+{% endwith %}

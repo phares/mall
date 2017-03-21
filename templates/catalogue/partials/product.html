@@ -1,0 +1,75 @@
+{% load reviews_tags %}
+{% load thumbnail %}
+{% load i18n %}
+{% load display_tags %}
+{% load staticfiles %}
+
+{% block product %}
+        <div class="col-sm-4">
+            <div class="product-image-wrapper">
+                <div class="single-products">
+                    <div class="productinfo text-center">
+                    {% block product_image %}
+                            {% with image=product.primary_image %}
+                                {% thumbnail image.original "x155" upscale=False as thumb %}
+                                <a href="{{ product.get_absolute_url }}"><img src="{{ thumb.url }}" alt="{{ product.get_title }}" width="304" height="236" ></a>
+                                {% endthumbnail %}
+                            {% endwith %}
+                    {% endblock %}
+        {% block product_review %}
+            {% iffeature "reviews" %}
+                <p class="star-rating {{ product.rating|as_stars }}">
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                    <i class="icon-star"></i>
+                </p>
+            {% endiffeature %}
+        {% endblock %}
+
+        {% block product_title %}
+            <p><a href="{{ product.get_absolute_url }}" title="{{ product.get_title }}">{{ product.get_title|truncatewords:4 }}</a></p>
+        {% endblock %}
+
+        {% block product_price %}
+                {% include "catalogue/partials/stock_record.html" %}
+                {% if not product.is_parent %}
+                    {% include "catalogue/partials/add_to_basket_form_compact.html" %}
+                {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+
+                        <!--<div class="col-sm-4">-->
+							<!--<div class="product-image-wrapper">-->
+								<!--<div class="single-products">-->
+									<!--<div class="productinfo text-center">-->
+										<!--<img src="images/shop/product12.jpg" alt="" />-->
+										<!--<h2>$56</h2>-->
+										<!--<p>Easy Polo Black Edition</p>-->
+										<!--<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>-->
+									<!--</div>-->
+									<!--<div class="product-overlay">-->
+										<!--<div class="overlay-content">-->
+											<!--<h2>$56</h2>-->
+											<!--<p>Easy Polo Black Edition</p>-->
+											<!--<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>-->
+										<!--</div>-->
+									<!--</div>-->
+								<!--</div>-->
+								<!--<div class="choose">-->
+									<!--<ul class="nav nav-pills nav-justified">-->
+										<!--<li><a href=""><i class="fa fa-plus-square"></i>Add to wishlist</a></li>-->
+										<!--<li><a href=""><i class="fa fa-plus-square"></i>Add to compare</a></li>-->
+									<!--</ul>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+
+
+
+
+{% endblock %}

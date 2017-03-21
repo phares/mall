@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load promotion_tags %}
+
+{% block styles %}
+    {% comment %}
+        If you are developing Oscar's CSS, or overriding Oscar's CSS
+        files in your project, then set USE_LESS = True in your
+        settings file. This will enable the on-the-fly less compiler.
+    {% endcomment %}
+    {% if use_less %}
+        <!--<link rel="stylesheet/less" type="text/css" href="{% static "oscar/less/styles.less" %}" />-->
+    {% else %}
+        <!--<link rel="stylesheet" type="text/css" href="{% static "oscar/css/styles.css" %}" />-->
+
+        <link rel="stylesheet" type="text/css" href="{% static 'eshop/css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'eshop/css/font-awesome.min.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'eshop/css/prettyPhoto.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'eshop/css/price-range.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'eshop/css/animate.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'eshop/css/main.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'eshop/css/responsive.css' %}" />
+
+    {% endif %}
+    <link rel="stylesheet" href="{% static "oscar/js/bootstrap-datetimepicker/bootstrap-datetimepicker.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "oscar/css/datetimepicker.css" %}" />
+{% endblock %}
+
+{% block layout %}
+    {# Top-horizontal bar with account, notifictions, dashboard links #}
+    {% include "partials/nav_accounts.html" %}
+	<header id="header"><!--header-->
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+                {% include "partials/brand.html" %}
+                {# Mini-basket wrapped in a block so some templates can now display it #}
+                {% block mini_basket %}{% include "partials/mini_basket.html" %}{% endblock %}
+                </div>
+			</div>
+		</div><!--/header-middle-->
+
+        {% block navigation %}
+            {% include "partials/nav_primary.html" %}
+        {% endblock %}
+    </header>
+	<section>
+		<div class="container">
+            {# Main content of page - other layout templates may override this block #}
+            {% block content_wrapper %}
+
+                    {% block breadcrumbs %}{% endblock %}
+                    {% block header %}
+
+                        <div class="page-header action">
+                            <h1>{% block headertext %}{% endblock %}</h1>
+                        </div>
+                    {% endblock %}
+                    {% include "partials/alert_messages.html" %}
+                    {% block subnavigation %}{% endblock %}
+                        {% block subheader %}{% endblock subheader %}
+
+                        {# Render promotions #}
+                            {% for promotion in promotions_page %}
+                                {% render_promotion promotion %}
+                            {% endfor %}
+
+                        {# Div exists for AJAX updates to entire content section #}
+                        {% block content %}{% endblock %}
+
+            {% endblock %}
+        </div>
+    </section>
+
+    {% include "partials/footer.html" %}
+{% endblock %}
+
+{% block cdn_scripts %}
+  {{ block.super }}
+  {% if use_less and debug %}
+    {# Load the on-the-fly less compiler. Never do this in production. #}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+  {% endif %}
+{% endblock %}
+
+{# Local scripts #}
+{% block scripts %}
+    {{ block.super }}
+    <!-- Twitter Bootstrap -->
+    <script type="text/javascript" src="{% static "oscar/js/bootstrap3/bootstrap.min.js" %}"></script>
+    <!-- Oscar -->
+    <script src="{% static "oscar/js/oscar/ui.js" %}" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript" src="{% static 'eshop/js/jquery.js' %}"></script>
+	<script type="text/javascript" src="{% static 'eshop/js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'eshop/js/jquery.scrollUp.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'eshop/js/price-range.js' %}"></script>
+    <script type="text/javascript" src="{% static 'eshop/js/jquery.prettyPhoto.js' %}"></script>
+    <script type="text/javascript" src="{% static 'eshop/js/main.js' %}"></script>
+
+    <script src="{% static "oscar/js/bootstrap-datetimepicker/bootstrap-datetimepicker.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static "oscar/js/bootstrap-datetimepicker/locales/bootstrap-datetimepicker.all.js" %}" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+
+{% block extrascripts %}
+    {% include "partials/extrascripts.html" %}
+    {{ block.super }}
+{% endblock %}
+
+{% block onbodyload %}
+    {{ block.super }}
+    oscar.init();
+{% endblock %}
