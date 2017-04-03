@@ -174,6 +174,7 @@ APPEND_SLASH = True
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static/'),
+    os.path.join(BASE_DIR, 'static/eshop/'),
 )
 
 DEBUG_COLLECTSTATIC=1

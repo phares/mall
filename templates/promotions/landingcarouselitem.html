@@ -1,0 +1,12 @@
+{% load staticfiles %}
+
+<div class="col-sm-6">
+  <h1><span>E</span>-SHOPPER</h1>
+  <h2>{{title}}</h2>
+  <p>{{description}}</p>
+  <button type="button" class="btn btn-default get">Get it now</button>
+</div>
+<div class="col-sm-6">
+  <img src="{% static image %}" class="girl img-responsive" alt="" />
+  <img src="{% static 'eshop/images/home/pricing.png' %}"  class="pricing" alt="" />
+</div>
