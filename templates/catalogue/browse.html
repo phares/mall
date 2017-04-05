@@ -25,37 +25,8 @@
 
 
 		<div class="left-sidebar">
-            {% category_tree as tree_categories %}
-            {% if tree_categories %}
-            <h2>Category</h2>
-            <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <ul class="nav nav-list">
-                                {% for tree_category, info in tree_categories %}
-                                    <li>
-                                        <a href="{{ tree_category.get_absolute_url }}">
-                                            {% if tree_category.pk == category.pk %}
-                                                <strong>{{ tree_category.name }}</strong>
-                                            {% else %}
-                                                {{ tree_category.name }}
-                                            {% endif %}
-                                        </a>
-
-                                        {% if info.has_children %}<ul>{% else %}</li>{% endif %}
-                                        {% for n in info.num_to_close %}
-                                            </ul>
-                                    </li>
-                                        {% endfor %}
-                                {% endfor %}
-                            </ul>
-                        </h4>
-                    </div>
-                </div>
-            </div><!--/category-products-->
-        {% endif %}
-        </div>
+      {% include "partials/category_list.html" %}
+    </div>
 
 
 
@@ -77,7 +48,7 @@
 
 {% block content %}
 
-    <form method="get" class="form-horizontal">
+    <form method="get" class="form-horizontal" style="text-align:center;">
         {# Render other search params in a hidden block #}
         <div style="display:none">
             {% for value in selected_facets %}

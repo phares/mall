@@ -1,0 +1,27 @@
+{% load staticfiles %}
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+    {% if sub_categories %}
+      <a data-toggle="collapse" data-parent="#accordian" href="#{{category.slug}}">
+        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
+        {{category.name}}
+      </a>
+    {% else %}
+      <a href="{{category.get_absolute_url}}">{{category.name}}</a>
+    {% endif %}
+    </h4>
+  </div>
+  {% if sub_categories %}
+  <div id="{{category.slug}}" class="panel-collapse collapse">
+    <div class="panel-body">
+      <ul>
+        {% for categ, info in sub_categories %}
+        <li><a href="{{categ.get_absolute_url}}">{{categ.name}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endif %}
+</div>

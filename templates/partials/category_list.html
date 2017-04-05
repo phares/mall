@@ -1,0 +1,20 @@
+{% load currency_filters %}
+{% load category_tags %}
+
+<h2>Category</h2>
+
+<div class="panel-group category-products" id="accordian"><!--category-productsr-->
+  {% category_tree depth=2 as tree_categories %}
+  {% if tree_categories %}
+  {% for categ, info in tree_categories %}
+    {% if info.level == 0 %}
+      {% if info.has_children %}
+        {% category_tree depth=1 parent=categ as sub_categories %}
+        {% include "partials/singlecategoryitem.html" with category=categ sub_categories=sub_categories %}
+      {% else %}
+        {% include "partials/singlecategoryitem.html" with category=categ %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  {% endif %}
+</div><!--/category-products-->

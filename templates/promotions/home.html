@@ -96,24 +96,7 @@
 			<div class="row">
 				<div class="col-sm-3">
 					<div class="left-sidebar">
-						<h2>Category</h2>
-						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
-              {% with sp_categ="Nike Puma Adidas ASICS" men_categ="Guess Versace Armani Gucci" women_categ="Fendi Prada Valentino Dior" %}
-              {% include "promotions/singlecategoryitem.html" with category="sportswear" subcategories=sp_categ.split %}
-              {% include "promotions/singlecategoryitem.html" with category="mens" subcategories=men_categ.split %}
-              {% include "promotions/singlecategoryitem.html" with category="womens" subcategories=women_categ.split %}
-              {% include "promotions/singlecategoryitem.html" with category="kids" %}
-              {% include "promotions/singlecategoryitem.html" with category="fashion" %}
-              {% include "promotions/singlecategoryitem.html" with category="households" %}
-              {% include "promotions/singlecategoryitem.html" with category="interiors" %}
-              {% include "promotions/singlecategoryitem.html" with category="clothing" %}
-              {% include "promotions/singlecategoryitem.html" with category="bags" %}
-              {% include "promotions/singlecategoryitem.html" with category="shoes" %}
-              {% endwith %}
-              {% for categ in categories %}
-              {% include "promotions/singlecategoryitem.html" with category=categ.name subcategories=categ.subs %}
-              {% endfor %}
-						</div><!--/category-products-->
+            {% include "partials/category_list.html" %}
 
 						<div class="brands_products"><!--brands_products-->
 							<h2>Brands</h2>
@@ -180,11 +163,7 @@
 						</div>
 						<div class="tab-content">
               {% for tab in tabs.split %}
-              {% if forloop.counter == 1 %}
-              <div class="tab-pane fade active in" id="{{tab}}" >
-              {% else %}
-              <div class="tab-pane fade" id="{{tab}}" >
-              {% endif %}
+              <div class="tab-pane fade {% if forloop.counter == 1 %}active in{% endif %}" id="{{tab}}" >
                 {% for image in images.split %}
                 {% include "promotions/singletabproduct.html" with image=image %}
                 {% endfor %}
@@ -201,11 +180,7 @@
               {% with images="images/home/recommend1.jpg images/home/recommend2.jpg images/home/recommend3.jpg" %}
 							<div class="carousel-inner">
                 {% for i in  "xxxx" %}
-                {% if forloop.counter == 1 %}
-								<div class="item active">
-                {% else %}
-                <div class="item">
-                {% endif %}
+								<div class="item {% if forloop.counter == 1 %}active{% endif %}">
                 {% for image in images.split %}
                   {% include "promotions/singlereccommendedproduct.html" with image=image %}
                 {% endfor %}
