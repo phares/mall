@@ -1,6 +1,6 @@
 appdirs==1.4.3
 Babel==2.3.4
-Django==1.10.6
+Django==1.11
 django-appconf==1.0.2
 django-compressor==2.1.1
 django-extra-views==0.6.4
@@ -24,7 +24,7 @@ pycountry==17.1.8
 pyparsing==2.2.0
 pysolr==3.6.0
 python-dateutil==2.6.0
-pytz==2016.10
+pytz==2017.2
 rcssmin==1.0.6
 requests==2.13.0
 rjsmin==1.0.12

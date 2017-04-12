@@ -13,6 +13,7 @@
 {% block headertext %}{{ category.name }}{% endblock %}
 
 {% block breadcrumbs %}
+  <div class="breadcrumbs">
     <ul class="breadcrumb">
         <li>
             <a href="{{ homepage_url }}">{% trans "Home" %}</a>
@@ -24,6 +25,7 @@
         {% endfor %}
         <li class="active">{{ category.name }}</li>
     </ul>
+  </div>
 {% endblock breadcrumbs %}
 
 {% block content %}

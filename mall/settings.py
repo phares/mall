@@ -63,7 +63,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'compressor',
     'widget_tweaks',
-]+ get_core_apps()
+    'myapps.uimanagement',
+]+ get_core_apps(['myapps.catalogue'])
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

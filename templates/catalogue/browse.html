@@ -13,20 +13,20 @@
 {% block headertext %}{{ summary }}{% endblock %}
 
 {% block breadcrumbs %}
+  <div class="breadcrumbs">
     <ul class="breadcrumb">
         <li>
             <a href="{{ homepage_url }}">{% trans "Home" %}</a>
         </li>
         <li class="active">{{ summary }}</li>
     </ul>
+  </div>
 {% endblock breadcrumbs %}
 
 {% block column_left %}
 
+{% include "partials/sidebar.html" %}
 
-		<div class="left-sidebar">
-      {% include "partials/category_list.html" %}
-    </div>
 
 
 
@@ -84,11 +84,11 @@
     </form>
 
     {% if products %}
-                    {% for product in products %}
-                        {% render_product product %}
-                    {% endfor %}
+        {% for product in products %}
+            {% render_product product %}
+        {% endfor %}
 
-                {% include "partials/pagination.html" %}
+        {% include "partials/pagination.html" %}
     {% else %}
         <p class="nonefound">{% trans "No products found." %}</p>
     {% endif %}

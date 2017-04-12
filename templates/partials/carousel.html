@@ -1,0 +1,49 @@
+{% load staticfiles %}
+
+	<section id="slider"><!--slider-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+              {% if carousel_length > 1 %}
+                {% for i in carousel_range %}
+  							<li data-target="#slider-carousel" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}"></li>
+                {% endfor %}
+              {% endif %}
+						</ol>
+
+						<div class="carousel-inner">
+              {% for c in carousel_items %}
+              <div class="item {% if forloop.first %}active{% endif %}">
+                <div class="col-sm-6">
+                  <h1><span>E</span>-SHOPPER</h1>
+                  <h2>{{c.title}}</h2>
+                  <p>{{c.description}}</p>
+                  <button type="button" class="btn btn-default get">Get it now</button>
+                </div>
+                <div class="col-sm-6">
+                  <img src="{{ c.image.url }}" class="girl img-responsive" alt="" />
+                  <img src="{% static 'eshop/images/home/pricing.png' %}"  class="pricing" alt="" />
+                </div>
+              </div>
+              {% empty %}
+              <div class="item active">
+              {% include "promotions/landingcarouselitem.html" with title="NAMBA ONE GiRL" description="DOOOH!!" image="images/home/girl2.jpg" %}
+              </div>
+              {% endfor %}
+						</div>
+            {% if carousel_length > 1 %}
+						<a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+							<i class="fa fa-angle-left"></i>
+						</a>
+						<a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+							<i class="fa fa-angle-right"></i>
+						</a>
+            {% endif %}
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section><!--/slider-->

@@ -1,0 +1,14 @@
+{% load currency_filters %}
+{% load brands_tags %}
+
+<div class="brands_products"><!--brands_products-->
+  <h2>Brands</h2>
+  <div class="brands-name">
+    <ul class="nav nav-pills nav-stacked">
+      {% brand_list as brands %}
+      {% for brand in brands %}
+      <li><a href="#"> <span class="pull-right">({{brand.stock}})</span>{{brand.name}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div><!--/brands_products-->
