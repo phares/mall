@@ -1,11 +1,25 @@
 /*price range*/
 
- $('#sl2').slider();
-
+(function () {
+  var rangeInput = $('#sl2');
+  var rangeSlider = rangeInput.slider();
+  // rangeSlider.on("slideStop", function (e) {
+  //   changeRange();
+  // });
+  function changeRange() {
+    var newVal = rangeInput.data('slider').getValue();
+    var url = window.location;
+    window.location.href = `${url.origin+url.pathname}?min=${newVal[0]}&max=${newVal[1]}`
+  }
+  $("#change-range").on("click", function (e) {
+    e.preventDefault();
+    changeRange();
+  })
+}())
 	var RGBChange = function() {
 	  $('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')
-	};	
-		
+	};
+
 /*scroll to top*/
 
 $(document).ready(function(){

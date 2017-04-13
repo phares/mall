@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.db.models import Max
 from django.views.generic.list import MultipleObjectMixin
 
 from oscar.core.loading import get_model
@@ -26,17 +27,20 @@ class SimpleProductSearchHandler(MultipleObjectMixin):
         max_price, min_price = request_data.get("max"), request_data.get("min")
         self.min = int(min_price) if min_price and min_price.isdecimal() else None
         self.max = int(max_price) if max_price and max_price.isdecimal() else None
+        if self.max == self.min:
+            self.max = None
 
     def get_queryset(self):
         qs = Product.browsable.base_queryset()
+        self.max_price = qs.aggregate(Max("price"))["price__max"]
+        if self.brand:
+            qs = qs.filter(brand__slug=self.brand)
         if self.min:
             qs = qs.filter(price__gte=self.min)
         if self.max:
             qs = qs.filter(price__lte=self.max)
         if self.categories:
             qs = qs.filter(categories__in=self.categories).distinct()
-        if self.brand:
-            qs = qs.filter(brand__slug=self.brand)
         return qs
 
     def get_search_context_data(self, context_object_name):
@@ -45,4 +49,5 @@ class SimpleProductSearchHandler(MultipleObjectMixin):
         self.context_object_name = context_object_name
         context = self.get_context_data(object_list=self.object_list)
         context[context_object_name] = context['page_obj'].object_list
+        context["max_price"] = self.max_price
         return context
