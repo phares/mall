@@ -51,9 +51,7 @@
 {% block content %}
     <div class="row">
         <div class="col-sm-3">
-            <div class="left-sidebar">
-              {% include "partials/category_list.html" %}
-            </div>
+            {% include "partials/sidebar.html" with no_range=True %}
         </div>
 
 

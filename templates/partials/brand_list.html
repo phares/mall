@@ -6,8 +6,8 @@
   <div class="brands-name">
     <ul class="nav nav-pills nav-stacked">
       {% brand_list as brands %}
-      {% for brand in brands %}
-      <li><a href="#"> <span class="pull-right">({{brand.stock}})</span>{{brand.name}}</a></li>
+      {% for brand, stock in brands %}
+      <li><a href="{{ brand.get_absolute_url }}"> <span class="pull-right">({{stock}})</span>{{brand.name}}</a></li>
       {% endfor %}
     </ul>
   </div>

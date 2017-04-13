@@ -22,8 +22,8 @@
         <link rel="stylesheet" type="text/css" href="{% static 'eshop/css/responsive.css' %}" />
 
     {% endif %}
-    <link rel="stylesheet" href="{% static "oscar/js/bootstrap-datetimepicker/bootstrap-datetimepicker.css" %}" />
-    <link rel="stylesheet" type="text/css" href="{% static "oscar/css/datetimepicker.css" %}" />
+    <link rel="stylesheet" href="{% static 'oscar/js/bootstrap-datetimepicker/bootstrap-datetimepicker.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'oscar/css/datetimepicker.css' %}" />
 {% endblock %}
 
 {% block layout %}
@@ -87,9 +87,9 @@
 {% block scripts %}
     {{ block.super }}
     <!-- Twitter Bootstrap -->
-    <script type="text/javascript" src="{% static "oscar/js/bootstrap3/bootstrap.min.js" %}"></script>
+    <script type="text/javascript" src="{% static 'oscar/js/bootstrap3/bootstrap.min.js' %}"></script>
     <!-- Oscar -->
-    <script src="{% static "oscar/js/oscar/ui.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'oscar/js/oscar/ui.js' %}" type="text/javascript" charset="utf-8"></script>
 
     <script type="text/javascript" src="{% static 'eshop/js/jquery.js' %}"></script>
 	<script type="text/javascript" src="{% static 'eshop/js/bootstrap.min.js' %}"></script>
@@ -98,8 +98,8 @@
     <script type="text/javascript" src="{% static 'eshop/js/jquery.prettyPhoto.js' %}"></script>
     <script type="text/javascript" src="{% static 'eshop/js/main.js' %}"></script>
 
-    <script src="{% static "oscar/js/bootstrap-datetimepicker/bootstrap-datetimepicker.js" %}" type="text/javascript" charset="utf-8"></script>
-    <script src="{% static "oscar/js/bootstrap-datetimepicker/locales/bootstrap-datetimepicker.all.js" %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'oscar/js/bootstrap-datetimepicker/bootstrap-datetimepicker.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'oscar/js/bootstrap-datetimepicker/locales/bootstrap-datetimepicker.all.js' %}" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
 
 {% block extrascripts %}

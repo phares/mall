@@ -12,5 +12,5 @@ assignment_tag = assignment_tag(register)
 @assignment_tag(name="brand_list")
 def get_list_of_brands():
     b = Brand.objects.all()
-    brands = map(lambda x : {"name":  x.name, "stock": Product.objects.filter(brand=x).count()}, b)
+    brands = map(lambda x : (x,  Product.objects.filter(brand=x).count()) , b)
     return brands

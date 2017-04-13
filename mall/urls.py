@@ -23,4 +23,9 @@ urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^admin/', admin.site.urls),
     url(r'', include(application.urls)),
+    url(r'', include('myapps.custom.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler403 = 'myapps.error_handlers._403'
+handler404 = 'myapps.error_handlers._404'
+handler500 = 'myapps.error_handlers._500'
