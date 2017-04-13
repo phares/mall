@@ -30,6 +30,7 @@ class Brand(models.Model):
 class Product(AbstractProduct):
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
     price = models.PositiveIntegerField(default=0)
+    is_featured = models.BooleanField(default=False)
 
     @property
     def is_new(self):

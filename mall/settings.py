@@ -64,7 +64,7 @@ INSTALLED_APPS = [
     'compressor',
     'widget_tweaks',
     'myapps.custom',
-]+ get_core_apps(['myapps.catalogue'])
+]+ get_core_apps(['myapps.catalogue', 'myapps.promotions'])
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

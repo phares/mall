@@ -2,7 +2,7 @@
 <div class="left-sidebar">
   {% include "partials/category_list.html" %}
   {% include "partials/brand_list.html" %}
-  {% if not no_range %}
+  {% if not no_range and max_price %}
   <div class="price-range"><!--price-range-->
     <h2>Price Range</h2>
     <div class="well text-center">
