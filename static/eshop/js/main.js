@@ -15,7 +15,25 @@
     e.preventDefault();
     changeRange();
   })
-}())
+}());
+/* Quantity changein cart */
+(function () {
+  if($(".cart_quantity")){
+    var quantityInput = $(".cart_quantity_input");
+    $(".cart_quantity_up").on("click", function (e) {
+      e.preventDefault();
+      var val = parseInt(quantityInput.val());
+      quantityInput.val(++val);
+    });
+    $(".cart_quantity_down").on("click", function (e) {
+      e.preventDefault();
+      var val = parseInt(quantityInput.val());
+      if(val > 0){
+        quantityInput.val(--val);
+      }
+    });
+  }
+}());
 	var RGBChange = function() {
 	  $('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')
 	};

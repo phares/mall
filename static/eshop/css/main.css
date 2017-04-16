@@ -1593,6 +1593,7 @@ h2.title {
 .cart_info table tr td {
   border-top: 0 none;
   vertical-align: inherit;
+  margin: 0 auto;
 }
 
 
@@ -1658,9 +1659,7 @@ h2.title {
 
 
 .cart_delete  {
-  display: block;
-  margin-right: -12px;
-  overflow: hidden;
+  width: 75px;
 }
 
 
@@ -1776,7 +1775,7 @@ h2.title {
   margin-left: 40px;
 }
 
-.update, .check_out {
+.update, .check_out, .check_out_color, .check_out_color_inverse {
   background: #FE980F;
   border-radius: 0;
   color: #FFFFFF;
@@ -1789,10 +1788,15 @@ h2.title {
 }
 
 .check_out {
-  margin-left: 20px
+  margin-left: 20px;
 }
 
-
+.check_out_color, .check_out_color_inverse {
+  margin-top: 0;
+}
+.check_out_color_inverse {
+  background-color: #bbb;
+}
 
 /*************************
 *******checkout CSS******
@@ -1903,10 +1907,10 @@ h2.title {
 }
 
 
-.shopper-info > form > input,
-.form-two > form > select,
-.form-two > form > input,
-.form-one > form > input {
+.shopper-info  > input,
+.form-two  > select,
+.form-two  > input,
+.form-one  > input {
   background:#F0F0E9;
   border: 0 none;
   margin-bottom:10px;

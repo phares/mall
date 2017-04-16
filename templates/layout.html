@@ -8,6 +8,8 @@
         files in your project, then set USE_LESS = True in your
         settings file. This will enable the on-the-fly less compiler.
     {% endcomment %}
+    <link rel="stylesheet" href="{% static 'oscar/js/bootstrap-datetimepicker/bootstrap-datetimepicker.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'oscar/css/datetimepicker.css' %}" />
     {% if use_less %}
         <!--<link rel="stylesheet/less" type="text/css" href="{% static "oscar/less/styles.less" %}" />-->
     {% else %}
@@ -22,8 +24,6 @@
         <link rel="stylesheet" type="text/css" href="{% static 'eshop/css/responsive.css' %}" />
 
     {% endif %}
-    <link rel="stylesheet" href="{% static 'oscar/js/bootstrap-datetimepicker/bootstrap-datetimepicker.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'oscar/css/datetimepicker.css' %}" />
 {% endblock %}
 
 {% block layout %}
@@ -45,7 +45,7 @@
         {% endblock %}
     </header>
 	<section>
-		<div class="container">
+		<div class="container" id="content_inner">
             {# Main content of page - other layout templates may override this block #}
             {% block content_wrapper %}
 

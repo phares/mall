@@ -27,7 +27,7 @@
                                 {% endif %}
 
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+								<li><a href="{% url 'checkout:index' %}"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="{% url 'basket:summary' %}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
                                 {% if user.is_authenticated %}
                                 <li><a id="logout_link" href="{% url 'customer:logout' %}"><i class="fa fa-lock"></i> {% trans "Logout" %} </a></li>
