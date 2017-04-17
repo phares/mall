@@ -1,0 +1,36 @@
+{% load reviews_tags %}
+{% load thumbnail %}
+{% load i18n %}
+{% load display_tags %}
+
+{% if has_image %}
+{% block product_image %}
+    {% with image=product.primary_image %}
+        {% thumbnail image.original "x155" upscale=False as thumb %}
+        <a href="{{ product.get_absolute_url }}"><img src="{{ thumb.url }}" alt="{{ product.get_title }}" width="304" height="236" ></a>
+        {% endthumbnail %}
+    {% endwith %}
+{% endblock %}
+{% endif %}
+
+{% block product_price %}
+        {% include "catalogue/partials/stock_record.html" %}
+        {% block product_title %}
+            <a href="{{ product.get_absolute_url }}" title="{{ product.get_title }}"><p>{{ product.get_title|truncatewords:4 }}</p></a>
+        {% endblock %}
+        {% if not product.is_parent %}
+            {% include "catalogue/partials/add_to_basket_form_compact.html" %}
+        {% endif %}
+{% endblock %}
+
+{% block product_review %}
+    {% iffeature "reviews" %}
+        <p class="star-rating {{ product.rating|as_stars }}">
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+        </p>
+    {% endiffeature %}
+{% endblock %}

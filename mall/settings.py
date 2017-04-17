@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+
+from django.utils.translation import ugettext_lazy as _
+
 import oscar
 from oscar.defaults import *
 from oscar import OSCAR_MAIN_TEMPLATE_DIR, get_core_apps
@@ -42,6 +45,12 @@ OSCAR_ORDER_STATUS_PIPELINE = {
     'Cancelled': (),
 }
 
+OSCAR_DASHBOARD_NAVIGATION[1]['children'].append({
+    'label': _('Brands'),
+    'url_name': 'dashboard:catalogue-brand-list',
+    'access_fn': lambda user, url_name, url_args, url_kwargs: user.is_staff,
+})
+
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -64,7 +73,7 @@ INSTALLED_APPS = [
     'compressor',
     'widget_tweaks',
     'myapps.custom',
-]+ get_core_apps(['myapps.catalogue', 'myapps.promotions'])
+]+ get_core_apps(['myapps.catalogue', 'myapps.promotions', 'myapps.dashboard.catalogue'])
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

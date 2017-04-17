@@ -1,0 +1,30 @@
+{% extends 'dashboard/layout.html' %}
+{% load category_tags %}
+{% load i18n %}
+{% load render_table from django_tables2 %}
+
+{% block body_class %}{{ block.super }} brands{% endblock %}
+
+{% block title %}
+    {% trans "Brands" %} | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{% url 'dashboard:index' %}">{% trans "Dashboard" %}</a>
+        </li>
+        <li class="active">{% trans "Categories" %}</li>
+    </ul>
+{% endblock %}
+
+{% block header %}
+    <div class="page-header">
+        <a href="{% url 'dashboard:catalogue-brand-create' %}" class="btn btn-primary btn-lg pull-right"><i class="icon-plus"></i> {% trans "Create new brand" %}</a>
+        <h1>{% trans "Categories" %}</h1>
+    </div>
+{% endblock header %}
+
+{% block dashboard_content %}
+  {% render_table brands %}
+{% endblock dashboard_content %}

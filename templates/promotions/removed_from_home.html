@@ -1,0 +1,61 @@
+
+{% with urls='images/home/product1.jpg images/home/product2.jpg images/home/product3.jpg images/home/product4.jpg images/home/product5.jpg images/home/product6.jpg' %}
+{% for url in urls.split %}
+  {% if forloop.counter == 4 %}
+  {% include "promotions/singlefeaturedproduct.html" with image=url is_new=True %}
+  {% elif forloop.counter == 5 %}
+  {% include "promotions/singlefeaturedproduct.html" with image=url on_sale=True %}
+  {% else %}
+  {% include "promotions/singlefeaturedproduct.html" with image=url %}
+  {% endif %}
+{% endfor %}
+{% endwith %}
+
+<div class="category-tab"><!--category-tab-->
+  {% with tabs="tshirt blazers sunglass kids poloshirt" images="images/home/gallery1.jpg images/home/gallery2.jpg images/home/gallery3.jpg images/home/gallery4.jpg" %}
+  <div class="col-sm-12">
+    <ul class="nav nav-tabs">
+      {% for tab in tabs.split %}
+      {% if forloop.counter == 1 %}
+      <li class="active"><a href="#{{tab}}" data-toggle="tab">{{tab|title}}</a></li>
+      {% else %}
+      <li><a href="#{{tab}}" data-toggle="tab">{{tab|title}}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="tab-content">
+    {% for tab in tabs.split %}
+    <div class="tab-pane fade {% if forloop.counter == 1 %}active in{% endif %}" id="{{tab}}" >
+      {% for image in images.split %}
+      {% include "promotions/singletabproduct.html" with image=image %}
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+  {% endwith %}
+</div><!--/category-tab-->
+
+<div class="recommended_items"><!--recommended_items-->
+  <h2 class="title text-center">recommended items</h2>
+
+  <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+    {% with images="images/home/recommend1.jpg images/home/recommend2.jpg images/home/recommend3.jpg" %}
+    <div class="carousel-inner">
+      {% for i in  "xxxx" %}
+      <div class="item {% if forloop.counter == 1 %}active{% endif %}">
+      {% for image in images.split %}
+        {% include "promotions/singlereccommendedproduct.html" with image=image %}
+      {% endfor %}
+      </div>
+      {% endfor %}
+    {% endwith %}
+    </div>
+     <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+      <i class="fa fa-angle-left"></i>
+      </a>
+      <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+      <i class="fa fa-angle-right"></i>
+      </a>
+  </div>
+</div><!--/recommended_items-->

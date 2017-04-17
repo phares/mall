@@ -4,11 +4,13 @@
 {% load category_tags %}
 
 {% block layout %}
+  {% include "partials/nav_accounts.html" %}
 
     <header class="header container-fluid">
         <div class="page_inner">
             <div class="row">
                 {% include "partials/brand.html" %}
+                {% block mini_basket %}{% include "partials/mini_basket.html" %}{% endblock %}
             </div><!-- /row -->
         </div>
         {% block checkout_nav %}{% endblock %}

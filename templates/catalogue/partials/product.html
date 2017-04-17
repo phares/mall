@@ -1,7 +1,3 @@
-{% load reviews_tags %}
-{% load thumbnail %}
-{% load i18n %}
-{% load display_tags %}
 {% load staticfiles %}
 
 {% block product %}
@@ -9,39 +5,18 @@
       <div class="product-image-wrapper">
         <div class="single-products">
           <div class="productinfo text-center">
-            {% block product_image %}
-                {% with image=product.primary_image %}
-                    {% thumbnail image.original "x155" upscale=False as thumb %}
-                    <a href="{{ product.get_absolute_url }}"><img src="{{ thumb.url }}" alt="{{ product.get_title }}" width="304" height="236" ></a>
-                    {% endthumbnail %}
-                {% endwith %}
-            {% endblock %}
-
-            {% block product_price %}
-                    {% include "catalogue/partials/stock_record.html" %}
-                    {% block product_title %}
-                        <a href="{{ product.get_absolute_url }}" title="{{ product.get_title }}"><p>{{ product.get_title|truncatewords:4 }}</p></a>
-                    {% endblock %}
-                    {% if not product.is_parent %}
-                        {% include "catalogue/partials/add_to_basket_form_compact.html" %}
-                    {% endif %}
-            {% endblock %}
-
-            {% block product_review %}
-                {% iffeature "reviews" %}
-                    <p class="star-rating {{ product.rating|as_stars }}">
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                    </p>
-                {% endiffeature %}
-            {% endblock %}
-
-
-
+            {% include "catalogue/partials/product_blocks.html" with has_image=True %}
           </div>
+          <div class="product-overlay">
+            <div class="overlay-content" style="margin-bottom: -10px;">
+              {% include "catalogue/partials/product_blocks.html" with has_image=False %}
+            </div>
+          </div>
+          {% if product.on_sale %}
+            <img src="{% static 'images/home/sale.png' %}" class="new" alt="" />
+          {% elif product.is_new %}
+            <img src="{% static 'images/home/new.png' %}" class="new" alt="" />
+          {% endif %}
         </div>
       </div>
     </div>

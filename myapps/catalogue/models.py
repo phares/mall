@@ -17,8 +17,13 @@ class Brand(models.Model):
     def get_absolute_url(self):
         return ("catalogue:brand", (), {"brand": self.slug})
 
+    @models.permalink
+    def get_dash_url(self):
+        return ("dashboard:catalogue-brand-edit", (), {"pk": self.pk})
+
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.name)
+        if not self.slug:
+            self.slug = slugify(self.name)
         super(Brand, self).save(*args, **kwargs)
 
     def __str__(self):
@@ -28,13 +33,14 @@ class Brand(models.Model):
 
 
 class Product(AbstractProduct):
-    brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
+    brand = models.ForeignKey(Brand, on_delete=models.CASCADE, default=0)
     price = models.PositiveIntegerField(default=0)
     is_featured = models.BooleanField(default=False)
+    on_sale = models.BooleanField(default=False)
 
     @property
     def is_new(self):
         day_diff = (date.today()-self.date_created.date()).days
-        return day_diff > 2
+        return day_diff < 2
 
 from oscar.apps.catalogue.models import *
