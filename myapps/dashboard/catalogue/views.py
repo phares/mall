@@ -20,10 +20,6 @@ class BrandListView(SingleTableView):
         return Brand.objects.all()
 
 
-    # def get_context_data(self, *args, **kwargs):
-    #     ctx = super(CategoryListView, self).get_context_data(*args, **kwargs)
-    #     ctx['child_categories'] = Category.get_root_nodes()
-    #     return ctx
 class BrandMixin:
     def get_success_url(self):
         return reverse("dashboard:catalogue-brand-list")
@@ -57,7 +53,7 @@ class BrandUpdateView(BrandMixin, UpdateView):
         return super(BrandUpdateView, self).get_success_url()
 
 class BrandDeleteView(BrandMixin, DeleteView):
-    template_name = 'dashboard/catalogue/category_delete.html'
+    template_name = 'dashboard/catalogue/brand_delete.html'
     model = Brand
 
     def get_success_url(self):

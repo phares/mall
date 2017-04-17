@@ -17,10 +17,6 @@ class Brand(models.Model):
     def get_absolute_url(self):
         return ("catalogue:brand", (), {"brand": self.slug})
 
-    @models.permalink
-    def get_dash_url(self):
-        return ("dashboard:catalogue-brand-edit", (), {"pk": self.pk})
-
     def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.name)

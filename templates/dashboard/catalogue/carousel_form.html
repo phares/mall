@@ -5,7 +5,7 @@
 {% block body_class %}{{ block.super }} create-page catalogue{% endblock %}
 
 {% block title %}
-    {{ title }} | {% trans "Brands" %} | {{ block.super }}
+    {{ title }} | {% trans "Carousel Items" %} | {{ block.super }}
 {% endblock %}
 
 {% block breadcrumbs %}
@@ -14,7 +14,7 @@
             <a href="{% url 'dashboard:index' %}">{% trans "Dashboard" %}</a>
         </li>
         <li>
-            <a href="{% url 'dashboard:catalogue-category-list' %}">{% trans "Brands" %}</a>
+            <a href="{% url 'custom:carousel-item-list' %}">{% trans "Carousel Items" %}</a>
         </li>
         <li class="active">{{ title }}</li>
     </ul>

@@ -1,12 +1,12 @@
 from django import template
-from ..models import Carousel
+from ..models import CarouselItem
 
 register = template.Library()
 
 
 @register.inclusion_tag("partials/carousel.html")
 def load_carousel():
-    carousel = Carousel.objects.all()
+    carousel = CarouselItem.objects.all()
     length = carousel.count()
     return {
         "carousel_range": range(length),

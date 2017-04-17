@@ -3,10 +3,10 @@
 {% load i18n %}
 {% load render_table from django_tables2 %}
 
-{% block body_class %}{{ block.super }} brands{% endblock %}
+{% block body_class %}{{ block.super }} carousel items{% endblock %}
 
 {% block title %}
-    {% trans "Brands" %} | {{ block.super }}
+    {% trans "Carousel Items" %} | {{ block.super }}
 {% endblock %}
 
 {% block breadcrumbs %}
@@ -14,17 +14,17 @@
         <li>
             <a href="{% url 'dashboard:index' %}">{% trans "Dashboard" %}</a>
         </li>
-        <li class="active">{% trans "Categories" %}</li>
+        <li class="active">{% trans "Carousel Items" %}</li>
     </ul>
 {% endblock %}
 
 {% block header %}
     <div class="page-header">
-        <a href="{% url 'dashboard:catalogue-brand-create' %}" class="btn btn-primary btn-lg pull-right"><i class="icon-plus"></i> {% trans "Create new brand" %}</a>
-        <h1>{% trans "Brands" %}</h1>
+        <a href="{% url 'custom:carousel-item-create' %}" class="btn btn-primary btn-lg pull-right"><i class="icon-plus"></i> {% trans "Create new carousel item" %}</a>
+        <h1>{% trans "Carousel Items" %}</h1>
     </div>
 {% endblock header %}
 
 {% block dashboard_content %}
-  {% render_table brands %}
+  {% render_table carousel %}
 {% endblock dashboard_content %}

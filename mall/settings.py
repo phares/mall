@@ -50,6 +50,11 @@ OSCAR_DASHBOARD_NAVIGATION[1]['children'].append({
     'url_name': 'dashboard:catalogue-brand-list',
     'access_fn': lambda user, url_name, url_args, url_kwargs: user.is_staff,
 })
+OSCAR_DASHBOARD_NAVIGATION[5]['children'].append({
+    'label': _('Carousel'),
+    'url_name': 'custom:carousel-item-list',
+    'access_fn': lambda user, url_name, url_args, url_kwargs: user.is_staff,
+})
 
 #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -73,7 +78,7 @@ INSTALLED_APPS = [
     'compressor',
     'widget_tweaks',
     'myapps.custom',
-]+ get_core_apps(['myapps.catalogue', 'myapps.promotions', 'myapps.dashboard.catalogue'])
+]+ get_core_apps(['myapps.catalogue', 'myapps.promotions', 'myapps.dashboard.catalogue', 'myapps.dashboard.custom'])
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

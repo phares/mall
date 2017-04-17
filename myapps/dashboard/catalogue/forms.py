@@ -14,6 +14,7 @@ class ProductForm(ProductF):
             'structure': forms.HiddenInput()
         }
 class BrandForm(forms.ModelForm):
+    slug = forms.SlugField(required=False)
     class Meta:
         model = Brand
         fields = ('name', 'slug')

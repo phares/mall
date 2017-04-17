@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Carousel
+from .models import CarouselItem
 
 # Register your models here.
-admin.site.register(Carousel)
+admin.site.register(CarouselItem)
