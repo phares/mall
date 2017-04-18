@@ -1,9 +1,9 @@
 from django import forms
-from .models import CarouselItem
 
 from oscar.core.loading import  get_model
 
 Product = get_model("catalogue", "Product")
+CarouselItem = get_model("promotions", "CarouselItem")
 
 class CarouselItemForm(forms.ModelForm):
     link = forms.URLField(required=False)

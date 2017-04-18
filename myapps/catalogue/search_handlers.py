@@ -49,5 +49,6 @@ class SimpleProductSearchHandler(MultipleObjectMixin):
         self.context_object_name = context_object_name
         context = self.get_context_data(object_list=self.object_list)
         context[context_object_name] = context['page_obj'].object_list
+        print(context)
         context["max_price"] = self.max_price
         return context

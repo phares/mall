@@ -20,7 +20,7 @@
                   <h1><span>E</span>-SHOPPER</h1>
                   <h2>{{c.title}}</h2>
                   <p>{{c.description}}</p>
-                  <button type="button" class="btn btn-default get">Get it now</button>
+                  <button type="button" class="btn btn-default get"><a href="{% if c.product %}{{ c.product.get_absolute_url }}{% elif c.link %}{{ c.link }}{% else %}#{% endif %}">Get it now</a></button>
                 </div>
                 <div class="col-sm-6">
                   <img src="{{ c.image.url }}" class="girl img-responsive" alt="" />

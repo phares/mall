@@ -1,6 +1,7 @@
 from django import template
-from ..models import CarouselItem
+from oscar.core.loading import  get_model
 
+CarouselItem = get_model("promotions", "CarouselItem")
 register = template.Library()
 
 

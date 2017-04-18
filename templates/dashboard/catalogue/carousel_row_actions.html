@@ -8,12 +8,12 @@
         </button>
         <ul class="nav dropdown-menu pull-right">
             <li>
-                <a href="{% url 'custom:carousel-item-edit' pk=record.id %}">
+                <a href="{% url 'dashboard:carousel-item-edit' pk=record.id %}">
                     {% trans "Edit" %}
                 </a>
             </li>
             <li>
-                <a href="{% url 'custom:carousel-item-delete' pk=record.id %}">
+                <a href="{% url 'dashboard:carousel-item-delete' pk=record.id %}">
                     {% trans "Delete" %}
                 </a>
             </li>

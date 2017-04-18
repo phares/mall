@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ../env/bin/activate
+
 # Fork django oscar app
 if [ $# -eq 1 ] && [ -d "myapps/" ]
 then

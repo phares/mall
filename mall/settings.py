@@ -52,7 +52,7 @@ OSCAR_DASHBOARD_NAVIGATION[1]['children'].append({
 })
 OSCAR_DASHBOARD_NAVIGATION[5]['children'].append({
     'label': _('Carousel'),
-    'url_name': 'custom:carousel-item-list',
+    'url_name': 'dashboard:carousel-item-list',
     'access_fn': lambda user, url_name, url_args, url_kwargs: user.is_staff,
 })
 
@@ -78,7 +78,7 @@ INSTALLED_APPS = [
     'compressor',
     'widget_tweaks',
     'myapps.custom',
-]+ get_core_apps(['myapps.catalogue', 'myapps.promotions', 'myapps.dashboard.catalogue', 'myapps.dashboard.custom'])
+]+ get_core_apps(['myapps.catalogue', 'myapps.promotions', 'myapps.dashboard.catalogue', 'myapps.dashboard.promotions'])
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

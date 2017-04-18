@@ -3,18 +3,16 @@
 (function () {
   var rangeInput = $('#sl2');
   var rangeSlider = rangeInput.slider();
-  // rangeSlider.on("slideStop", function (e) {
-  //   changeRange();
-  // });
+  rangeSlider.on("slideStop", changeRange);
   function changeRange() {
     var newVal = rangeInput.data('slider').getValue();
     var url = window.location;
     window.location.href = `${url.origin+url.pathname}?min=${newVal[0]}&max=${newVal[1]}`
   }
-  $("#change-range").on("click", function (e) {
-    e.preventDefault();
-    changeRange();
-  })
+  // $("#change-range").on("click", function (e) {
+  //   e.preventDefault();
+  //   changeRange();
+  // })
 }());
 /* Quantity changein cart */
 (function () {
