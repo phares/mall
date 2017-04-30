@@ -1,0 +1,439 @@
+INFO  - 2017-04-29 17:45:45.804; org.eclipse.jetty.server.Server; jetty-8.1.10.v20130312
+INFO  - 2017-04-29 17:45:45.836; org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor /home/scurrae/Desktop/mall/solr-4.7.2/example/contexts at interval 0
+INFO  - 2017-04-29 17:45:45.842; org.eclipse.jetty.deploy.DeploymentManager; Deployable added: /home/scurrae/Desktop/mall/solr-4.7.2/example/contexts/solr-jetty-context.xml
+INFO  - 2017-04-29 17:45:45.897; org.eclipse.jetty.webapp.WebInfConfiguration; Extract jar:file:/home/scurrae/Desktop/mall/solr-4.7.2/example/webapps/solr.war!/ to /home/scurrae/Desktop/mall/solr-4.7.2/example/solr-webapp/webapp
+INFO  - 2017-04-29 17:45:46.967; org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2017-04-29 17:45:47.020; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init()
+INFO  - 2017-04-29 17:45:47.032; org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2017-04-29 17:45:47.032; org.apache.solr.core.SolrResourceLoader; solr home defaulted to 'solr/' (could not find system property or JNDI)
+INFO  - 2017-04-29 17:45:47.033; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'solr/'
+INFO  - 2017-04-29 17:45:47.144; org.apache.solr.core.ConfigSolr; Loading container configuration from /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/solr.xml
+INFO  - 2017-04-29 17:45:47.214; org.apache.solr.core.CorePropertiesLocator; Config-defined core root directory: /home/scurrae/Desktop/mall/solr-4.7.2/example/solr
+INFO  - 2017-04-29 17:45:47.224; org.apache.solr.core.CoreContainer; New CoreContainer 1427040229
+INFO  - 2017-04-29 17:45:47.224; org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=solr/]
+INFO  - 2017-04-29 17:45:47.240; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting socketTimeout to: 0
+INFO  - 2017-04-29 17:45:47.240; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting urlScheme to: null
+INFO  - 2017-04-29 17:45:47.245; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting connTimeout to: 0
+INFO  - 2017-04-29 17:45:47.248; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnectionsPerHost to: 20
+INFO  - 2017-04-29 17:45:47.248; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting corePoolSize to: 0
+INFO  - 2017-04-29 17:45:47.248; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maximumPoolSize to: 2147483647
+INFO  - 2017-04-29 17:45:47.249; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxThreadIdleTime to: 5
+INFO  - 2017-04-29 17:45:47.249; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting sizeOfQueue to: -1
+INFO  - 2017-04-29 17:45:47.249; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting fairnessPolicy to: false
+INFO  - 2017-04-29 17:45:47.411; org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2017-04-29 17:45:47.412; org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2017-04-29 17:45:47.414; org.apache.solr.core.CoreContainer; Host Name: 
+INFO  - 2017-04-29 17:45:47.458; org.apache.solr.core.CorePropertiesLocator; Looking for core definitions underneath /home/scurrae/Desktop/mall/solr-4.7.2/example/solr
+INFO  - 2017-04-29 17:45:47.469; org.apache.solr.core.CorePropertiesLocator; Found core collection1 in /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/
+INFO  - 2017-04-29 17:45:47.470; org.apache.solr.core.CorePropertiesLocator; Found 1 core definitions
+INFO  - 2017-04-29 17:45:47.472; org.apache.solr.core.CoreContainer; Creating SolrCore 'collection1' using instanceDir: /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1
+INFO  - 2017-04-29 17:45:47.472; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/'
+INFO  - 2017-04-29 17:45:47.552; org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+INFO  - 2017-04-29 17:45:47.554; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/pdfbox-1.8.1.jar' to classloader
+INFO  - 2017-04-29 17:45:47.554; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/poi-ooxml-schemas-3.9.jar' to classloader
+INFO  - 2017-04-29 17:45:47.555; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/juniversalchardet-1.0.3.jar' to classloader
+INFO  - 2017-04-29 17:45:47.555; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/tagsoup-1.2.1.jar' to classloader
+INFO  - 2017-04-29 17:45:47.556; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/fontbox-1.8.1.jar' to classloader
+INFO  - 2017-04-29 17:45:47.556; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/xercesImpl-2.9.1.jar' to classloader
+INFO  - 2017-04-29 17:45:47.556; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/jdom-1.0.jar' to classloader
+INFO  - 2017-04-29 17:45:47.557; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/bcmail-jdk15-1.45.jar' to classloader
+INFO  - 2017-04-29 17:45:47.557; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/xz-1.0.jar' to classloader
+INFO  - 2017-04-29 17:45:47.557; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/apache-mime4j-core-0.7.2.jar' to classloader
+INFO  - 2017-04-29 17:45:47.557; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/aspectjrt-1.6.11.jar' to classloader
+INFO  - 2017-04-29 17:45:47.558; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/vorbis-java-core-0.1.jar' to classloader
+INFO  - 2017-04-29 17:45:47.558; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/bcprov-jdk15-1.45.jar' to classloader
+INFO  - 2017-04-29 17:45:47.558; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/tika-xmp-1.4.jar' to classloader
+INFO  - 2017-04-29 17:45:47.558; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/vorbis-java-tika-0.1.jar' to classloader
+INFO  - 2017-04-29 17:45:47.559; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/commons-compress-1.7.jar' to classloader
+INFO  - 2017-04-29 17:45:47.559; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/boilerpipe-1.1.0.jar' to classloader
+INFO  - 2017-04-29 17:45:47.559; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/isoparser-1.0-RC-1.jar' to classloader
+INFO  - 2017-04-29 17:45:47.560; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/xmlbeans-2.3.0.jar' to classloader
+INFO  - 2017-04-29 17:45:47.560; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/dom4j-1.6.1.jar' to classloader
+INFO  - 2017-04-29 17:45:47.560; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/poi-ooxml-3.9.jar' to classloader
+INFO  - 2017-04-29 17:45:47.560; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/metadata-extractor-2.6.2.jar' to classloader
+INFO  - 2017-04-29 17:45:47.561; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/poi-scratchpad-3.9.jar' to classloader
+INFO  - 2017-04-29 17:45:47.561; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/poi-3.9.jar' to classloader
+INFO  - 2017-04-29 17:45:47.561; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/icu4j-52.1.jar' to classloader
+INFO  - 2017-04-29 17:45:47.562; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/asm-3.1.jar' to classloader
+INFO  - 2017-04-29 17:45:47.562; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/tika-core-1.4.jar' to classloader
+INFO  - 2017-04-29 17:45:47.562; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/rome-0.9.jar' to classloader
+INFO  - 2017-04-29 17:45:47.562; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/apache-mime4j-dom-0.7.2.jar' to classloader
+INFO  - 2017-04-29 17:45:47.563; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/jempbox-1.8.1.jar' to classloader
+INFO  - 2017-04-29 17:45:47.563; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/xmpcore-5.1.2.jar' to classloader
+INFO  - 2017-04-29 17:45:47.563; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/netcdf-4.2-min.jar' to classloader
+INFO  - 2017-04-29 17:45:47.564; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/tika-parsers-1.4.jar' to classloader
+INFO  - 2017-04-29 17:45:47.565; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/dist/solr-cell-4.7.2.jar' to classloader
+INFO  - 2017-04-29 17:45:47.566; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/clustering/lib/hppc-0.5.2.jar' to classloader
+INFO  - 2017-04-29 17:45:47.566; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/clustering/lib/jackson-core-asl-1.9.13.jar' to classloader
+INFO  - 2017-04-29 17:45:47.566; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/clustering/lib/mahout-collections-1.0.jar' to classloader
+INFO  - 2017-04-29 17:45:47.566; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/clustering/lib/mahout-math-0.6.jar' to classloader
+INFO  - 2017-04-29 17:45:47.567; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/clustering/lib/carrot2-mini-3.8.0.jar' to classloader
+INFO  - 2017-04-29 17:45:47.567; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/clustering/lib/simple-xml-2.7.jar' to classloader
+INFO  - 2017-04-29 17:45:47.567; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/clustering/lib/jackson-mapper-asl-1.9.13.jar' to classloader
+INFO  - 2017-04-29 17:45:47.567; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/clustering/lib/attributes-binder-1.2.0.jar' to classloader
+INFO  - 2017-04-29 17:45:47.568; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/dist/solr-clustering-4.7.2.jar' to classloader
+INFO  - 2017-04-29 17:45:47.569; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/langid/lib/langdetect-1.1-20120112.jar' to classloader
+INFO  - 2017-04-29 17:45:47.569; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/langid/lib/jsonic-1.2.7.jar' to classloader
+INFO  - 2017-04-29 17:45:47.570; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/dist/solr-langid-4.7.2.jar' to classloader
+INFO  - 2017-04-29 17:45:47.571; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/velocity/lib/commons-collections-3.2.1.jar' to classloader
+INFO  - 2017-04-29 17:45:47.571; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/velocity/lib/velocity-1.7.jar' to classloader
+INFO  - 2017-04-29 17:45:47.571; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/velocity/lib/commons-beanutils-1.7.0.jar' to classloader
+INFO  - 2017-04-29 17:45:47.572; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/velocity/lib/velocity-tools-2.0.jar' to classloader
+INFO  - 2017-04-29 17:45:47.572; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/dist/solr-velocity-4.7.2.jar' to classloader
+INFO  - 2017-04-29 17:45:47.652; org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2017-04-29 17:45:47.658; org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: LUCENE_47
+INFO  - 2017-04-29 17:45:47.813; org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2017-04-29 17:45:47.820; org.apache.solr.schema.IndexSchema; Reading Solr Schema from schema.xml
+INFO  - 2017-04-29 17:45:47.838; org.apache.solr.schema.IndexSchema; [collection1] Schema name=default
+WARN  - 2017-04-29 17:45:47.892; org.apache.solr.core.SolrResourceLoader; Solr loaded a deprecated plugin/analysis class [solr.SortableIntField]. Please consult documentation how to replace it accordingly.
+WARN  - 2017-04-29 17:45:47.896; org.apache.solr.core.SolrResourceLoader; Solr loaded a deprecated plugin/analysis class [solr.SortableLongField]. Please consult documentation how to replace it accordingly.
+WARN  - 2017-04-29 17:45:47.898; org.apache.solr.core.SolrResourceLoader; Solr loaded a deprecated plugin/analysis class [solr.SortableFloatField]. Please consult documentation how to replace it accordingly.
+WARN  - 2017-04-29 17:45:47.901; org.apache.solr.core.SolrResourceLoader; Solr loaded a deprecated plugin/analysis class [solr.SortableDoubleField]. Please consult documentation how to replace it accordingly.
+INFO  - 2017-04-29 17:45:47.973; org.apache.solr.schema.IndexSchema; default search field in schema is text
+INFO  - 2017-04-29 17:45:47.974; org.apache.solr.schema.IndexSchema; query parser default operator is AND
+INFO  - 2017-04-29 17:45:47.975; org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2017-04-29 17:45:48.067; org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2017-04-29 17:45:48.072; org.apache.solr.core.SolrCore; [collection1] Opening new SolrCore at /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/, dataDir=/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/
+INFO  - 2017-04-29 17:45:48.074; org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2017-04-29 17:45:48.079; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2017-04-29 17:45:48.080; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2017-04-29 17:45:48.094; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data
+INFO  - 2017-04-29 17:45:48.094; org.apache.solr.core.SolrCore; New index directory detected: old=null new=/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index/
+WARN  - 2017-04-29 17:45:48.095; org.apache.solr.core.SolrCore; [collection1] Solr index directory '/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index' doesn't exist. Creating new index...
+INFO  - 2017-04-29 17:45:48.110; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index
+INFO  - 2017-04-29 17:45:48.270; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onCommit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index lockFactory=NativeFSLockFactory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+INFO  - 2017-04-29 17:45:48.270; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 1
+INFO  - 2017-04-29 17:45:48.272; org.apache.solr.core.SolrCore; created json: solr.JSONResponseWriter
+INFO  - 2017-04-29 17:45:48.273; org.apache.solr.core.SolrCore; adding lazy queryResponseWriter: solr.VelocityResponseWriter
+INFO  - 2017-04-29 17:45:48.273; org.apache.solr.core.SolrCore; created velocity: solr.VelocityResponseWriter
+INFO  - 2017-04-29 17:45:48.276; org.apache.solr.core.SolrCore; created xslt: solr.XSLTResponseWriter
+INFO  - 2017-04-29 17:45:48.276; org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2017-04-29 17:45:48.393; org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2017-04-29 17:45:48.400; org.apache.solr.core.RequestHandlers; created /select: solr.SearchHandler
+INFO  - 2017-04-29 17:45:48.400; org.apache.solr.core.RequestHandlers; created /query: solr.SearchHandler
+INFO  - 2017-04-29 17:45:48.402; org.apache.solr.core.RequestHandlers; created /get: solr.RealTimeGetHandler
+INFO  - 2017-04-29 17:45:48.402; org.apache.solr.core.RequestHandlers; created /browse: solr.SearchHandler
+INFO  - 2017-04-29 17:45:48.407; org.apache.solr.core.RequestHandlers; created /update: solr.UpdateRequestHandler
+INFO  - 2017-04-29 17:45:48.407; org.apache.solr.core.RequestHandlers; created /update/json: solr.UpdateRequestHandler
+INFO  - 2017-04-29 17:45:48.408; org.apache.solr.core.RequestHandlers; created /update/csv: solr.UpdateRequestHandler
+INFO  - 2017-04-29 17:45:48.408; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+INFO  - 2017-04-29 17:45:48.408; org.apache.solr.core.RequestHandlers; created /update/extract: solr.extraction.ExtractingRequestHandler
+INFO  - 2017-04-29 17:45:48.409; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+INFO  - 2017-04-29 17:45:48.409; org.apache.solr.core.RequestHandlers; created /analysis/field: solr.FieldAnalysisRequestHandler
+INFO  - 2017-04-29 17:45:48.409; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+INFO  - 2017-04-29 17:45:48.409; org.apache.solr.core.RequestHandlers; created /analysis/document: solr.DocumentAnalysisRequestHandler
+INFO  - 2017-04-29 17:45:48.411; org.apache.solr.core.RequestHandlers; created /admin/: solr.admin.AdminHandlers
+INFO  - 2017-04-29 17:45:48.412; org.apache.solr.core.RequestHandlers; created /admin/ping: solr.PingRequestHandler
+INFO  - 2017-04-29 17:45:48.413; org.apache.solr.core.RequestHandlers; created /debug/dump: solr.DumpRequestHandler
+INFO  - 2017-04-29 17:45:48.427; org.apache.solr.core.RequestHandlers; created /replication: solr.ReplicationHandler
+INFO  - 2017-04-29 17:45:48.428; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2017-04-29 17:45:48.428; org.apache.solr.core.RequestHandlers; created /spell: solr.SearchHandler
+INFO  - 2017-04-29 17:45:48.428; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2017-04-29 17:45:48.428; org.apache.solr.core.RequestHandlers; created /suggest: solr.SearchHandler
+INFO  - 2017-04-29 17:45:48.428; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2017-04-29 17:45:48.429; org.apache.solr.core.RequestHandlers; created /tvrh: solr.SearchHandler
+INFO  - 2017-04-29 17:45:48.429; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2017-04-29 17:45:48.429; org.apache.solr.core.RequestHandlers; created /terms: solr.SearchHandler
+INFO  - 2017-04-29 17:45:48.429; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2017-04-29 17:45:48.429; org.apache.solr.core.RequestHandlers; created /elevate: solr.SearchHandler
+INFO  - 2017-04-29 17:45:48.443; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2017-04-29 17:45:48.446; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2017-04-29 17:45:48.447; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2017-04-29 17:45:48.461; org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2017-04-29 17:45:48.461; org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2017-04-29 17:45:48.465; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index lockFactory=NativeFSLockFactory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+INFO  - 2017-04-29 17:45:48.466; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 1
+INFO  - 2017-04-29 17:45:48.471; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@273e94d5[collection1] main
+INFO  - 2017-04-29 17:45:48.476; org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2017-04-29 17:45:48.481; org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2017-04-29 17:45:48.486; org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2017-04-29 17:45:48.489; org.apache.solr.handler.component.SuggestComponent; Initializing SuggestComponent
+INFO  - 2017-04-29 17:45:48.491; org.apache.solr.spelling.suggest.SolrSuggester; init: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+INFO  - 2017-04-29 17:45:48.500; org.apache.solr.spelling.suggest.SolrSuggester; Dictionary loaded with params: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+INFO  - 2017-04-29 17:45:48.502; org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/conf/elevate.xml
+INFO  - 2017-04-29 17:45:48.529; org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2017-04-29 17:45:48.530; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@273e94d5[collection1] main{StandardDirectoryReader(segments_1:1:nrt)}
+INFO  - 2017-04-29 17:45:48.530; org.apache.solr.core.CoreContainer; registering core: collection1
+INFO  - 2017-04-29 17:45:48.551; org.apache.solr.servlet.SolrDispatchFilter; user.dir=/home/scurrae/Desktop/mall/solr-4.7.2/example
+INFO  - 2017-04-29 17:45:48.552; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2017-04-29 17:45:48.587; org.apache.solr.core.SolrCore; [collection1] webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=56 
+INFO  - 2017-04-29 17:45:48.588; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2017-04-29 17:45:48.588; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2017-04-29 17:45:48.589; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2017-04-29 17:45:48.589; org.apache.solr.handler.component.SuggestComponent$SuggesterListener; Loading suggester index for: mySuggester
+INFO  - 2017-04-29 17:45:48.589; org.apache.solr.spelling.suggest.SolrSuggester; reload()
+INFO  - 2017-04-29 17:45:48.589; org.apache.solr.spelling.suggest.SolrSuggester; build()
+INFO  - 2017-04-29 17:45:48.600; org.eclipse.jetty.server.AbstractConnector; Started SocketConnector@0.0.0.0:8983
+INFO  - 2017-04-29 17:45:48.603; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@273e94d5[collection1] main{StandardDirectoryReader(segments_1:1:nrt)}
+INFO  - 2017-04-29 17:51:21.753; org.eclipse.jetty.server.Server; Graceful shutdown SocketConnector@0.0.0.0:8983
+INFO  - 2017-04-29 17:51:21.754; org.eclipse.jetty.server.Server; Graceful shutdown o.e.j.w.WebAppContext{/solr,file:/home/scurrae/Desktop/mall/solr-4.7.2/example/solr-webapp/webapp/},/home/scurrae/Desktop/mall/solr-4.7.2/example/webapps/solr.war
+INFO  - 2017-04-29 17:51:22.761; org.apache.solr.core.CoreContainer; Shutting down CoreContainer instance=1427040229
+INFO  - 2017-04-29 17:51:22.761; org.apache.solr.core.SolrCore; [collection1]  CLOSING SolrCore org.apache.solr.core.SolrCore@1ec4930a
+INFO  - 2017-04-29 17:51:22.762; org.apache.solr.update.DirectUpdateHandler2; closing DirectUpdateHandler2{commits=0,autocommit maxTime=15000ms,autocommits=0,soft autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=0,cumulative_deletesById=0,cumulative_deletesByQuery=0,cumulative_errors=0,transaction_logs_total_size=0,transaction_logs_total_number=0}
+INFO  - 2017-04-29 17:51:22.762; org.apache.solr.update.SolrCoreState; Closing SolrCoreState
+INFO  - 2017-04-29 17:51:22.762; org.apache.solr.update.DefaultSolrCoreState; SolrCoreState ref count has reached 0 - closing IndexWriter
+INFO  - 2017-04-29 17:51:22.763; org.apache.solr.update.DefaultSolrCoreState; closing IndexWriter with IndexWriterCloser
+INFO  - 2017-04-29 17:51:22.764; org.apache.solr.core.SolrCore; [collection1] Closing main searcher on request.
+INFO  - 2017-04-29 17:51:22.764; org.apache.solr.core.CachingDirectoryFactory; Closing NRTCachingDirectoryFactory - 2 directories currently being tracked
+INFO  - 2017-04-29 17:51:22.765; org.apache.solr.core.CachingDirectoryFactory; looking to close /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index [CachedDir<<refCount=0;path=/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index;done=false>>]
+INFO  - 2017-04-29 17:51:22.765; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index
+INFO  - 2017-04-29 17:51:22.765; org.apache.solr.core.CachingDirectoryFactory; looking to close /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data [CachedDir<<refCount=0;path=/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data;done=false>>]
+INFO  - 2017-04-29 17:51:22.766; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data
+INFO  - 2017-04-29 17:51:22.767; org.eclipse.jetty.server.handler.ContextHandler; stopped o.e.j.w.WebAppContext{/solr,file:/home/scurrae/Desktop/mall/solr-4.7.2/example/solr-webapp/webapp/},/home/scurrae/Desktop/mall/solr-4.7.2/example/webapps/solr.war
+INFO  - 2017-04-29 17:53:22.609; org.eclipse.jetty.server.Server; jetty-8.1.10.v20130312
+INFO  - 2017-04-29 17:53:22.636; org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor /home/scurrae/Desktop/mall/solr-4.7.2/example/contexts at interval 0
+INFO  - 2017-04-29 17:53:22.649; org.eclipse.jetty.deploy.DeploymentManager; Deployable added: /home/scurrae/Desktop/mall/solr-4.7.2/example/contexts/solr-jetty-context.xml
+INFO  - 2017-04-29 17:53:23.520; org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2017-04-29 17:53:23.570; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init()
+INFO  - 2017-04-29 17:53:23.584; org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2017-04-29 17:53:23.586; org.apache.solr.core.SolrResourceLoader; solr home defaulted to 'solr/' (could not find system property or JNDI)
+INFO  - 2017-04-29 17:53:23.588; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'solr/'
+INFO  - 2017-04-29 17:53:23.685; org.apache.solr.core.ConfigSolr; Loading container configuration from /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/solr.xml
+INFO  - 2017-04-29 17:53:23.777; org.apache.solr.core.CorePropertiesLocator; Config-defined core root directory: /home/scurrae/Desktop/mall/solr-4.7.2/example/solr
+INFO  - 2017-04-29 17:53:23.784; org.apache.solr.core.CoreContainer; New CoreContainer 1604002113
+INFO  - 2017-04-29 17:53:23.785; org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=solr/]
+INFO  - 2017-04-29 17:53:23.798; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting socketTimeout to: 0
+INFO  - 2017-04-29 17:53:23.799; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting urlScheme to: null
+INFO  - 2017-04-29 17:53:23.803; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting connTimeout to: 0
+INFO  - 2017-04-29 17:53:23.803; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnectionsPerHost to: 20
+INFO  - 2017-04-29 17:53:23.805; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting corePoolSize to: 0
+INFO  - 2017-04-29 17:53:23.806; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maximumPoolSize to: 2147483647
+INFO  - 2017-04-29 17:53:23.806; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxThreadIdleTime to: 5
+INFO  - 2017-04-29 17:53:23.807; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting sizeOfQueue to: -1
+INFO  - 2017-04-29 17:53:23.807; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting fairnessPolicy to: false
+INFO  - 2017-04-29 17:53:23.969; org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2017-04-29 17:53:23.969; org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2017-04-29 17:53:23.971; org.apache.solr.core.CoreContainer; Host Name: 
+INFO  - 2017-04-29 17:53:24.011; org.apache.solr.core.CorePropertiesLocator; Looking for core definitions underneath /home/scurrae/Desktop/mall/solr-4.7.2/example/solr
+INFO  - 2017-04-29 17:53:24.024; org.apache.solr.core.CorePropertiesLocator; Found core collection1 in /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/
+INFO  - 2017-04-29 17:53:24.024; org.apache.solr.core.CorePropertiesLocator; Found 1 core definitions
+INFO  - 2017-04-29 17:53:24.028; org.apache.solr.core.CoreContainer; Creating SolrCore 'collection1' using instanceDir: /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1
+INFO  - 2017-04-29 17:53:24.029; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/'
+INFO  - 2017-04-29 17:53:24.135; org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+INFO  - 2017-04-29 17:53:24.136; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/pdfbox-1.8.1.jar' to classloader
+INFO  - 2017-04-29 17:53:24.136; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/poi-ooxml-schemas-3.9.jar' to classloader
+INFO  - 2017-04-29 17:53:24.137; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/juniversalchardet-1.0.3.jar' to classloader
+INFO  - 2017-04-29 17:53:24.137; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/tagsoup-1.2.1.jar' to classloader
+INFO  - 2017-04-29 17:53:24.137; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/fontbox-1.8.1.jar' to classloader
+INFO  - 2017-04-29 17:53:24.137; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/xercesImpl-2.9.1.jar' to classloader
+INFO  - 2017-04-29 17:53:24.137; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/jdom-1.0.jar' to classloader
+INFO  - 2017-04-29 17:53:24.138; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/bcmail-jdk15-1.45.jar' to classloader
+INFO  - 2017-04-29 17:53:24.138; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/xz-1.0.jar' to classloader
+INFO  - 2017-04-29 17:53:24.138; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/apache-mime4j-core-0.7.2.jar' to classloader
+INFO  - 2017-04-29 17:53:24.139; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/aspectjrt-1.6.11.jar' to classloader
+INFO  - 2017-04-29 17:53:24.139; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/vorbis-java-core-0.1.jar' to classloader
+INFO  - 2017-04-29 17:53:24.139; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/bcprov-jdk15-1.45.jar' to classloader
+INFO  - 2017-04-29 17:53:24.139; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/tika-xmp-1.4.jar' to classloader
+INFO  - 2017-04-29 17:53:24.139; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/vorbis-java-tika-0.1.jar' to classloader
+INFO  - 2017-04-29 17:53:24.140; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/commons-compress-1.7.jar' to classloader
+INFO  - 2017-04-29 17:53:24.140; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/boilerpipe-1.1.0.jar' to classloader
+INFO  - 2017-04-29 17:53:24.140; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/isoparser-1.0-RC-1.jar' to classloader
+INFO  - 2017-04-29 17:53:24.140; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/xmlbeans-2.3.0.jar' to classloader
+INFO  - 2017-04-29 17:53:24.140; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/dom4j-1.6.1.jar' to classloader
+INFO  - 2017-04-29 17:53:24.140; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/poi-ooxml-3.9.jar' to classloader
+INFO  - 2017-04-29 17:53:24.141; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/metadata-extractor-2.6.2.jar' to classloader
+INFO  - 2017-04-29 17:53:24.141; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/poi-scratchpad-3.9.jar' to classloader
+INFO  - 2017-04-29 17:53:24.141; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/poi-3.9.jar' to classloader
+INFO  - 2017-04-29 17:53:24.141; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/icu4j-52.1.jar' to classloader
+INFO  - 2017-04-29 17:53:24.141; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/asm-3.1.jar' to classloader
+INFO  - 2017-04-29 17:53:24.142; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/tika-core-1.4.jar' to classloader
+INFO  - 2017-04-29 17:53:24.142; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/rome-0.9.jar' to classloader
+INFO  - 2017-04-29 17:53:24.142; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/apache-mime4j-dom-0.7.2.jar' to classloader
+INFO  - 2017-04-29 17:53:24.142; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/jempbox-1.8.1.jar' to classloader
+INFO  - 2017-04-29 17:53:24.142; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/xmpcore-5.1.2.jar' to classloader
+INFO  - 2017-04-29 17:53:24.142; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/netcdf-4.2-min.jar' to classloader
+INFO  - 2017-04-29 17:53:24.143; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/extraction/lib/tika-parsers-1.4.jar' to classloader
+INFO  - 2017-04-29 17:53:24.143; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/dist/solr-cell-4.7.2.jar' to classloader
+INFO  - 2017-04-29 17:53:24.144; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/clustering/lib/hppc-0.5.2.jar' to classloader
+INFO  - 2017-04-29 17:53:24.145; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/clustering/lib/jackson-core-asl-1.9.13.jar' to classloader
+INFO  - 2017-04-29 17:53:24.145; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/clustering/lib/mahout-collections-1.0.jar' to classloader
+INFO  - 2017-04-29 17:53:24.145; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/clustering/lib/mahout-math-0.6.jar' to classloader
+INFO  - 2017-04-29 17:53:24.146; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/clustering/lib/carrot2-mini-3.8.0.jar' to classloader
+INFO  - 2017-04-29 17:53:24.146; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/clustering/lib/simple-xml-2.7.jar' to classloader
+INFO  - 2017-04-29 17:53:24.146; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/clustering/lib/jackson-mapper-asl-1.9.13.jar' to classloader
+INFO  - 2017-04-29 17:53:24.146; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/clustering/lib/attributes-binder-1.2.0.jar' to classloader
+INFO  - 2017-04-29 17:53:24.147; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/dist/solr-clustering-4.7.2.jar' to classloader
+INFO  - 2017-04-29 17:53:24.147; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/langid/lib/langdetect-1.1-20120112.jar' to classloader
+INFO  - 2017-04-29 17:53:24.147; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/langid/lib/jsonic-1.2.7.jar' to classloader
+INFO  - 2017-04-29 17:53:24.148; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/dist/solr-langid-4.7.2.jar' to classloader
+INFO  - 2017-04-29 17:53:24.149; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/velocity/lib/commons-collections-3.2.1.jar' to classloader
+INFO  - 2017-04-29 17:53:24.149; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/velocity/lib/velocity-1.7.jar' to classloader
+INFO  - 2017-04-29 17:53:24.149; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/velocity/lib/commons-beanutils-1.7.0.jar' to classloader
+INFO  - 2017-04-29 17:53:24.149; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/contrib/velocity/lib/velocity-tools-2.0.jar' to classloader
+INFO  - 2017-04-29 17:53:24.150; org.apache.solr.core.SolrResourceLoader; Adding 'file:/home/scurrae/Desktop/mall/solr-4.7.2/dist/solr-velocity-4.7.2.jar' to classloader
+INFO  - 2017-04-29 17:53:24.214; org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2017-04-29 17:53:24.220; org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: LUCENE_47
+INFO  - 2017-04-29 17:53:24.381; org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2017-04-29 17:53:24.389; org.apache.solr.schema.IndexSchema; Reading Solr Schema from schema.xml
+INFO  - 2017-04-29 17:53:24.404; org.apache.solr.schema.IndexSchema; [collection1] Schema name=default
+WARN  - 2017-04-29 17:53:24.476; org.apache.solr.core.SolrResourceLoader; Solr loaded a deprecated plugin/analysis class [solr.SortableIntField]. Please consult documentation how to replace it accordingly.
+WARN  - 2017-04-29 17:53:24.480; org.apache.solr.core.SolrResourceLoader; Solr loaded a deprecated plugin/analysis class [solr.SortableLongField]. Please consult documentation how to replace it accordingly.
+WARN  - 2017-04-29 17:53:24.484; org.apache.solr.core.SolrResourceLoader; Solr loaded a deprecated plugin/analysis class [solr.SortableFloatField]. Please consult documentation how to replace it accordingly.
+WARN  - 2017-04-29 17:53:24.488; org.apache.solr.core.SolrResourceLoader; Solr loaded a deprecated plugin/analysis class [solr.SortableDoubleField]. Please consult documentation how to replace it accordingly.
+INFO  - 2017-04-29 17:53:24.556; org.apache.solr.schema.IndexSchema; default search field in schema is text
+INFO  - 2017-04-29 17:53:24.557; org.apache.solr.schema.IndexSchema; query parser default operator is AND
+INFO  - 2017-04-29 17:53:24.558; org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2017-04-29 17:53:24.653; org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2017-04-29 17:53:24.660; org.apache.solr.core.SolrCore; [collection1] Opening new SolrCore at /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/, dataDir=/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/
+INFO  - 2017-04-29 17:53:24.662; org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2017-04-29 17:53:24.667; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2017-04-29 17:53:24.669; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2017-04-29 17:53:24.691; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data
+INFO  - 2017-04-29 17:53:24.691; org.apache.solr.core.SolrCore; New index directory detected: old=null new=/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index/
+INFO  - 2017-04-29 17:53:24.692; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index
+INFO  - 2017-04-29 17:53:24.709; org.apache.solr.core.SolrCore; created json: solr.JSONResponseWriter
+INFO  - 2017-04-29 17:53:24.710; org.apache.solr.core.SolrCore; adding lazy queryResponseWriter: solr.VelocityResponseWriter
+INFO  - 2017-04-29 17:53:24.711; org.apache.solr.core.SolrCore; created velocity: solr.VelocityResponseWriter
+INFO  - 2017-04-29 17:53:24.714; org.apache.solr.core.SolrCore; created xslt: solr.XSLTResponseWriter
+INFO  - 2017-04-29 17:53:24.715; org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2017-04-29 17:53:24.791; org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2017-04-29 17:53:24.798; org.apache.solr.core.RequestHandlers; created /select: solr.SearchHandler
+INFO  - 2017-04-29 17:53:24.799; org.apache.solr.core.RequestHandlers; created /query: solr.SearchHandler
+INFO  - 2017-04-29 17:53:24.800; org.apache.solr.core.RequestHandlers; created /get: solr.RealTimeGetHandler
+INFO  - 2017-04-29 17:53:24.801; org.apache.solr.core.RequestHandlers; created /browse: solr.SearchHandler
+INFO  - 2017-04-29 17:53:24.805; org.apache.solr.core.RequestHandlers; created /update: solr.UpdateRequestHandler
+INFO  - 2017-04-29 17:53:24.805; org.apache.solr.core.RequestHandlers; created /update/json: solr.UpdateRequestHandler
+INFO  - 2017-04-29 17:53:24.806; org.apache.solr.core.RequestHandlers; created /update/csv: solr.UpdateRequestHandler
+INFO  - 2017-04-29 17:53:24.806; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+INFO  - 2017-04-29 17:53:24.806; org.apache.solr.core.RequestHandlers; created /update/extract: solr.extraction.ExtractingRequestHandler
+INFO  - 2017-04-29 17:53:24.806; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+INFO  - 2017-04-29 17:53:24.807; org.apache.solr.core.RequestHandlers; created /analysis/field: solr.FieldAnalysisRequestHandler
+INFO  - 2017-04-29 17:53:24.807; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+INFO  - 2017-04-29 17:53:24.807; org.apache.solr.core.RequestHandlers; created /analysis/document: solr.DocumentAnalysisRequestHandler
+INFO  - 2017-04-29 17:53:24.809; org.apache.solr.core.RequestHandlers; created /admin/: solr.admin.AdminHandlers
+INFO  - 2017-04-29 17:53:24.810; org.apache.solr.core.RequestHandlers; created /admin/ping: solr.PingRequestHandler
+INFO  - 2017-04-29 17:53:24.812; org.apache.solr.core.RequestHandlers; created /debug/dump: solr.DumpRequestHandler
+INFO  - 2017-04-29 17:53:24.826; org.apache.solr.core.RequestHandlers; created /replication: solr.ReplicationHandler
+INFO  - 2017-04-29 17:53:24.826; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2017-04-29 17:53:24.826; org.apache.solr.core.RequestHandlers; created /spell: solr.SearchHandler
+INFO  - 2017-04-29 17:53:24.826; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2017-04-29 17:53:24.827; org.apache.solr.core.RequestHandlers; created /suggest: solr.SearchHandler
+INFO  - 2017-04-29 17:53:24.827; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2017-04-29 17:53:24.827; org.apache.solr.core.RequestHandlers; created /tvrh: solr.SearchHandler
+INFO  - 2017-04-29 17:53:24.827; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2017-04-29 17:53:24.827; org.apache.solr.core.RequestHandlers; created /terms: solr.SearchHandler
+INFO  - 2017-04-29 17:53:24.827; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2017-04-29 17:53:24.828; org.apache.solr.core.RequestHandlers; created /elevate: solr.SearchHandler
+INFO  - 2017-04-29 17:53:24.900; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2017-04-29 17:53:24.903; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2017-04-29 17:53:24.905; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2017-04-29 17:53:24.916; org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2017-04-29 17:53:24.917; org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2017-04-29 17:53:24.952; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index lockFactory=NativeFSLockFactory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+INFO  - 2017-04-29 17:53:24.953; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 1
+INFO  - 2017-04-29 17:53:24.963; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@3487f7a5[collection1] main
+INFO  - 2017-04-29 17:53:24.968; org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2017-04-29 17:53:24.976; org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2017-04-29 17:53:24.985; org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2017-04-29 17:53:24.987; org.apache.solr.handler.component.SuggestComponent; Initializing SuggestComponent
+INFO  - 2017-04-29 17:53:24.989; org.apache.solr.spelling.suggest.SolrSuggester; init: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+INFO  - 2017-04-29 17:53:25.002; org.apache.solr.spelling.suggest.SolrSuggester; Dictionary loaded with params: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+INFO  - 2017-04-29 17:53:25.003; org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/conf/elevate.xml
+INFO  - 2017-04-29 17:53:25.035; org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2017-04-29 17:53:25.036; org.apache.solr.core.CoreContainer; registering core: collection1
+INFO  - 2017-04-29 17:53:25.036; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@3487f7a5[collection1] main{StandardDirectoryReader(segments_1:1:nrt)}
+INFO  - 2017-04-29 17:53:25.038; org.apache.solr.servlet.SolrDispatchFilter; user.dir=/home/scurrae/Desktop/mall/solr-4.7.2/example
+INFO  - 2017-04-29 17:53:25.039; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2017-04-29 17:53:25.098; org.eclipse.jetty.server.AbstractConnector; Started SocketConnector@0.0.0.0:8983
+INFO  - 2017-04-29 17:53:25.101; org.apache.solr.core.SolrCore; [collection1] webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=63 
+INFO  - 2017-04-29 17:53:25.102; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2017-04-29 17:53:25.102; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2017-04-29 17:53:25.103; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2017-04-29 17:53:25.103; org.apache.solr.handler.component.SuggestComponent$SuggesterListener; Loading suggester index for: mySuggester
+INFO  - 2017-04-29 17:53:25.103; org.apache.solr.spelling.suggest.SolrSuggester; reload()
+INFO  - 2017-04-29 17:53:25.103; org.apache.solr.spelling.suggest.SolrSuggester; build()
+INFO  - 2017-04-29 17:53:25.112; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@3487f7a5[collection1] main{StandardDirectoryReader(segments_1:1:nrt)}
+INFO  - 2017-04-29 17:53:37.989; org.apache.solr.update.DirectUpdateHandler2; start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+INFO  - 2017-04-29 17:53:37.989; org.apache.solr.update.DirectUpdateHandler2; No uncommitted changes. Skipping IW.commit.
+INFO  - 2017-04-29 17:53:37.990; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@43663e26[collection1] main
+INFO  - 2017-04-29 17:53:37.991; org.apache.solr.update.DirectUpdateHandler2; end_commit_flush
+INFO  - 2017-04-29 17:53:37.992; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@43663e26[collection1] main{StandardDirectoryReader(segments_1:1:nrt)}
+INFO  - 2017-04-29 17:53:37.992; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2017-04-29 17:53:37.992; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@43663e26[collection1] main{StandardDirectoryReader(segments_1:1:nrt)}
+INFO  - 2017-04-29 17:53:37.995; org.apache.solr.update.processor.LogUpdateProcessor; [collection1] webapp=/solr path=/update/ params={commit=true} {deleteByQuery=*:* (-1566024786739462144),commit=} 0 54
+INFO  - 2017-04-29 17:53:38.004; org.apache.solr.update.DirectUpdateHandler2; start commit{,optimize=true,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+INFO  - 2017-04-29 17:53:38.005; org.apache.solr.update.DirectUpdateHandler2; No uncommitted changes. Skipping IW.commit.
+INFO  - 2017-04-29 17:53:38.006; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@1cc212d3[collection1] main
+INFO  - 2017-04-29 17:53:38.006; org.apache.solr.update.DirectUpdateHandler2; end_commit_flush
+INFO  - 2017-04-29 17:53:38.007; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@1cc212d3[collection1] main{StandardDirectoryReader(segments_1:1:nrt)}
+INFO  - 2017-04-29 17:53:38.007; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2017-04-29 17:53:38.007; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@1cc212d3[collection1] main{StandardDirectoryReader(segments_1:1:nrt)}
+INFO  - 2017-04-29 17:53:38.008; org.apache.solr.update.DirectUpdateHandler2; start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+INFO  - 2017-04-29 17:53:38.008; org.apache.solr.update.DirectUpdateHandler2; No uncommitted changes. Skipping IW.commit.
+INFO  - 2017-04-29 17:53:38.009; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@93085d2[collection1] main
+INFO  - 2017-04-29 17:53:38.009; org.apache.solr.update.DirectUpdateHandler2; end_commit_flush
+INFO  - 2017-04-29 17:53:38.010; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@93085d2[collection1] main{StandardDirectoryReader(segments_1:1:nrt)}
+INFO  - 2017-04-29 17:53:38.010; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2017-04-29 17:53:38.010; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@93085d2[collection1] main{StandardDirectoryReader(segments_1:1:nrt)}
+INFO  - 2017-04-29 17:53:38.015; org.apache.solr.update.processor.LogUpdateProcessor; [collection1] webapp=/solr path=/update/ params={commit=true} {optimize=,commit=} 0 11
+INFO  - 2017-04-29 17:53:38.095; org.apache.solr.update.DirectUpdateHandler2; start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+INFO  - 2017-04-29 17:53:38.668; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onCommit: commits: num=2
+	commit{dir=NRTCachingDirectory(MMapDirectory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index lockFactory=NativeFSLockFactory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+	commit{dir=NRTCachingDirectory(MMapDirectory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index lockFactory=NativeFSLockFactory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_2,generation=2}
+INFO  - 2017-04-29 17:53:38.668; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 2
+INFO  - 2017-04-29 17:53:38.682; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@31a5d4d[collection1] main
+INFO  - 2017-04-29 17:53:38.683; org.apache.solr.update.DirectUpdateHandler2; end_commit_flush
+INFO  - 2017-04-29 17:53:38.683; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@31a5d4d[collection1] main{StandardDirectoryReader(segments_2:3:nrt _0(4.7):C2)}
+INFO  - 2017-04-29 17:53:38.684; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2017-04-29 17:53:38.684; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@31a5d4d[collection1] main{StandardDirectoryReader(segments_2:3:nrt _0(4.7):C2)}
+INFO  - 2017-04-29 17:53:38.684; org.apache.solr.update.processor.LogUpdateProcessor; [collection1] webapp=/solr path=/update/ params={commit=true} {add=[catalogue.product.12 (1566024786840125440), catalogue.product.13 (1566024786868436992)],commit=} 0 623
+INFO  - 2017-04-29 17:56:12.391; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select/ params={facet.query=price_exact:[0+TO+20]&facet.query=price_exact:[20+TO+40]&facet.query=price_exact:[40+TO+60]&facet.query=price_exact:[60+TO+*]&q=*:*&facet.field=product_class_exact&facet.field=rating_exact&spellcheck=true&fl=*+score&start=0&spellcheck.count=1&fq=django_ct:(catalogue.product)&rows=1&wt=json&facet=on&spellcheck.collate=true} hits=2 status=0 QTime=38 
+INFO  - 2017-04-29 17:56:12.407; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select/ params={facet.query=price_exact:[0+TO+20]&facet.query=price_exact:[20+TO+40]&facet.query=price_exact:[40+TO+60]&facet.query=price_exact:[60+TO+*]&q=*:*&facet.field=product_class_exact&facet.field=rating_exact&spellcheck=true&fl=*+score&start=0&spellcheck.count=1&fq=django_ct:(catalogue.product)&rows=2&wt=json&facet=on&spellcheck.collate=true} hits=2 status=0 QTime=1 
+INFO  - 2017-04-29 17:56:17.753; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select/ params={facet.query=price_exact:[0+TO+20]&facet.query=price_exact:[20+TO+40]&facet.query=price_exact:[40+TO+60]&facet.query=price_exact:[60+TO+*]&q=*:*&facet.field=product_class_exact&facet.field=rating_exact&spellcheck=true&fl=*+score&start=0&spellcheck.count=1&fq=django_ct:(catalogue.product)&rows=1&wt=json&facet=on&spellcheck.collate=true} hits=2 status=0 QTime=2 
+INFO  - 2017-04-29 17:56:17.763; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select/ params={facet.query=price_exact:[0+TO+20]&facet.query=price_exact:[20+TO+40]&facet.query=price_exact:[40+TO+60]&facet.query=price_exact:[60+TO+*]&q=*:*&facet.field=product_class_exact&facet.field=rating_exact&spellcheck=true&fl=*+score&start=0&spellcheck.count=1&fq=django_ct:(catalogue.product)&rows=2&wt=json&facet=on&spellcheck.collate=true} hits=2 status=0 QTime=3 
+INFO  - 2017-04-29 19:00:03.921; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@6ba9fa87[collection1] realtime
+INFO  - 2017-04-29 19:00:03.922; org.apache.solr.update.DirectUpdateHandler2; start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+INFO  - 2017-04-29 19:00:04.028; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onCommit: commits: num=2
+	commit{dir=NRTCachingDirectory(MMapDirectory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index lockFactory=NativeFSLockFactory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_2,generation=2}
+	commit{dir=NRTCachingDirectory(MMapDirectory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index lockFactory=NativeFSLockFactory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_3,generation=3}
+INFO  - 2017-04-29 19:00:04.028; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 3
+INFO  - 2017-04-29 19:00:04.029; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@26de1261[collection1] main
+INFO  - 2017-04-29 19:00:04.030; org.apache.solr.update.DirectUpdateHandler2; end_commit_flush
+INFO  - 2017-04-29 19:00:04.030; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@26de1261[collection1] main{StandardDirectoryReader(segments_2:5:nrt)}
+INFO  - 2017-04-29 19:00:04.031; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2017-04-29 19:00:04.031; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@26de1261[collection1] main{StandardDirectoryReader(segments_2:5:nrt)}
+INFO  - 2017-04-29 19:00:04.033; org.apache.solr.update.processor.LogUpdateProcessor; [collection1] webapp=/solr path=/update/ params={commit=true} {deleteByQuery=*:* (-1566028966304677888),commit=} 0 121
+INFO  - 2017-04-29 19:00:04.039; org.apache.solr.update.DirectUpdateHandler2; start commit{,optimize=true,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+INFO  - 2017-04-29 19:00:04.039; org.apache.solr.update.DirectUpdateHandler2; No uncommitted changes. Skipping IW.commit.
+INFO  - 2017-04-29 19:00:04.040; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@533fec50[collection1] main
+INFO  - 2017-04-29 19:00:04.040; org.apache.solr.update.DirectUpdateHandler2; end_commit_flush
+INFO  - 2017-04-29 19:00:04.040; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@533fec50[collection1] main{StandardDirectoryReader(segments_2:5:nrt)}
+INFO  - 2017-04-29 19:00:04.041; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2017-04-29 19:00:04.041; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@533fec50[collection1] main{StandardDirectoryReader(segments_2:5:nrt)}
+INFO  - 2017-04-29 19:00:04.041; org.apache.solr.update.DirectUpdateHandler2; start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+INFO  - 2017-04-29 19:00:04.041; org.apache.solr.update.DirectUpdateHandler2; No uncommitted changes. Skipping IW.commit.
+INFO  - 2017-04-29 19:00:04.042; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@3a53b856[collection1] main
+INFO  - 2017-04-29 19:00:04.042; org.apache.solr.update.DirectUpdateHandler2; end_commit_flush
+INFO  - 2017-04-29 19:00:04.043; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@3a53b856[collection1] main{StandardDirectoryReader(segments_2:5:nrt)}
+INFO  - 2017-04-29 19:00:04.043; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2017-04-29 19:00:04.043; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@3a53b856[collection1] main{StandardDirectoryReader(segments_2:5:nrt)}
+INFO  - 2017-04-29 19:00:04.043; org.apache.solr.update.processor.LogUpdateProcessor; [collection1] webapp=/solr path=/update/ params={commit=true} {optimize=,commit=} 0 4
+INFO  - 2017-04-29 19:00:04.100; org.apache.solr.update.DirectUpdateHandler2; start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+INFO  - 2017-04-29 19:00:04.588; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onCommit: commits: num=2
+	commit{dir=NRTCachingDirectory(MMapDirectory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index lockFactory=NativeFSLockFactory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_3,generation=3}
+	commit{dir=NRTCachingDirectory(MMapDirectory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index lockFactory=NativeFSLockFactory@/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_4,generation=4}
+INFO  - 2017-04-29 19:00:04.588; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 4
+INFO  - 2017-04-29 19:00:04.593; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@34438d5c[collection1] main
+INFO  - 2017-04-29 19:00:04.594; org.apache.solr.update.DirectUpdateHandler2; end_commit_flush
+INFO  - 2017-04-29 19:00:04.594; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@34438d5c[collection1] main{StandardDirectoryReader(segments_4:7:nrt _1(4.7):C2)}
+INFO  - 2017-04-29 19:00:04.595; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2017-04-29 19:00:04.595; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@34438d5c[collection1] main{StandardDirectoryReader(segments_4:7:nrt _1(4.7):C2)}
+INFO  - 2017-04-29 19:00:04.596; org.apache.solr.update.processor.LogUpdateProcessor; [collection1] webapp=/solr path=/update/ params={commit=true} {add=[catalogue.product.12 (1566028966493421568), catalogue.product.13 (1566028966498664448)],commit=} 0 505
+INFO  - 2017-04-29 19:20:53.082; org.eclipse.jetty.server.Server; Graceful shutdown SocketConnector@0.0.0.0:8983
+INFO  - 2017-04-29 19:20:53.098; org.eclipse.jetty.server.Server; Graceful shutdown o.e.j.w.WebAppContext{/solr,file:/home/scurrae/Desktop/mall/solr-4.7.2/example/solr-webapp/webapp/},/home/scurrae/Desktop/mall/solr-4.7.2/example/webapps/solr.war
+INFO  - 2017-04-29 19:20:54.101; org.apache.solr.core.CoreContainer; Shutting down CoreContainer instance=1604002113
+INFO  - 2017-04-29 19:20:54.101; org.apache.solr.core.SolrCore; [collection1]  CLOSING SolrCore org.apache.solr.core.SolrCore@6fbd9e06
+INFO  - 2017-04-29 19:20:54.102; org.apache.solr.update.DirectUpdateHandler2; closing DirectUpdateHandler2{commits=6,autocommit maxTime=15000ms,autocommits=0,soft autocommits=0,optimizes=2,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=4,cumulative_deletesById=0,cumulative_deletesByQuery=2,cumulative_errors=0,transaction_logs_total_size=3170,transaction_logs_total_number=4}
+INFO  - 2017-04-29 19:20:54.102; org.apache.solr.update.SolrCoreState; Closing SolrCoreState
+INFO  - 2017-04-29 19:20:54.102; org.apache.solr.update.DefaultSolrCoreState; SolrCoreState ref count has reached 0 - closing IndexWriter
+INFO  - 2017-04-29 19:20:54.102; org.apache.solr.update.DefaultSolrCoreState; closing IndexWriter with IndexWriterCloser
+INFO  - 2017-04-29 19:20:54.104; org.apache.solr.core.SolrCore; [collection1] Closing main searcher on request.
+INFO  - 2017-04-29 19:20:54.105; org.apache.solr.core.CachingDirectoryFactory; Closing NRTCachingDirectoryFactory - 2 directories currently being tracked
+INFO  - 2017-04-29 19:20:54.105; org.apache.solr.core.CachingDirectoryFactory; looking to close /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index [CachedDir<<refCount=0;path=/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index;done=false>>]
+INFO  - 2017-04-29 19:20:54.106; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data/index
+INFO  - 2017-04-29 19:20:54.106; org.apache.solr.core.CachingDirectoryFactory; looking to close /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data [CachedDir<<refCount=0;path=/home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data;done=false>>]
+INFO  - 2017-04-29 19:20:54.106; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /home/scurrae/Desktop/mall/solr-4.7.2/example/solr/collection1/data
+INFO  - 2017-04-29 19:20:54.107; org.eclipse.jetty.server.handler.ContextHandler; stopped o.e.j.w.WebAppContext{/solr,file:/home/scurrae/Desktop/mall/solr-4.7.2/example/solr-webapp/webapp/},/home/scurrae/Desktop/mall/solr-4.7.2/example/webapps/solr.war

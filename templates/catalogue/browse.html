@@ -47,7 +47,7 @@
 {% endblock %}
 
 {% block content %}
-
+<!--{#
     <form method="get" class="form-horizontal" style="text-align:center;">
         {# Render other search params in a hidden block #}
         <div style="display:none">
@@ -82,13 +82,15 @@
             </p>
         {% endif %}
     </form>
+  }#-->
 
-    {% if products %}
+    {% if products and products.count > 0 %}
         {% for product in products %}
             {% render_product product %}
         {% endfor %}
-
-        {% include "partials/pagination.html" %}
+        <div class="row col-xs-12">
+          {% include "partials/pagination.html" %}
+        </div>
     {% else %}
         <p class="nonefound">{% trans "No products found." %}</p>
     {% endif %}

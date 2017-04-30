@@ -1,4 +1,2 @@
-mall/__pycache__/
-django.sh
-utils.sh
+*/__pycache__/
 staticfiles/

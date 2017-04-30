@@ -1,5 +1,5 @@
 from django.utils.translation import ugettext_lazy as _
-
+from django.core.paginator import EmptyPage, InvalidPage
 from oscar.apps.catalogue.views import CatalogueView
 
 class BrandsView(CatalogueView):
